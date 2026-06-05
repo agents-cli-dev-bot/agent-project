@@ -1,0 +1,83 @@
+metrics_to_run:
+  - custom_response_quality
+  - custom_tool_usage
+  - custom_scope_compliance
+
+custom_metrics:
+  - name: custom_response_quality
+    prompt_template: |
+      You are an expert quality assurance evaluator for a customer support AI agent that supports CloudSync Pro, DataVault, and InsightBoard software products.
+
+      Evaluate the agent's final response given the user prompt and full agent trace. Grade on a scale of 1 to 5:
+      1 (Poor): Response fails to address the query, gives wrong info, is rude, or ignores the customer's emotional state.
+      2 (Below Average): Response partially addresses the query but has inaccuracies, missing steps, or poor tone.
+      3 (Acceptable): Response answers the query adequately but lacks empathy, detail, or clear next steps.
+      4 (Good): Response is accurate, empathetic, well-structured, and gives the customer a clear path forward.
+      5 (Excellent): Response is highly accurate, empathetic, complete, and gives a clear and reassuring resolution or next step.
+
+      ### Target Evaluation:
+      User Prompt: {prompt}
+      Final Response: {response}
+      Full Agent Trace: {agent_data}
+
+      Return your evaluation as a valid JSON object:
+      {
+        "score": <integer between 1 and 5>,
+        "explanation": "<detailed rationale for the score>"
+      }
+
+  - name: custom_tool_usage
+    prompt_template: |
+      You are evaluating whether a customer support AI agent correctly used its tools.
+
+      The agent has three tools:
+      - lookup_product_info(product_id): Must be called when customer asks about a product by ID.
+      - check_known_issues(error_code): Must be called when customer reports a specific error code like ERR-XXXX.
+      - escalate_to_human(case_summary, priority): Must be called for urgent/unresolved issues or data loss scenarios.
+
+      Score tool usage on a scale of 1 to 5:
+      1 (Poor): Agent did not call a tool when it clearly should have (e.g., product asked about but no lookup, error code mentioned but not checked).
+      2 (Below Average): Agent called the wrong tool or used incorrect parameters.
+      3 (Acceptable): Agent called the right tool but used suboptimal parameters or missed an additional tool call.
+      4 (Good): Agent called the appropriate tool(s) with correct parameters.
+      5 (Excellent): Agent called all appropriate tools, in the right order, with precise parameters that exactly match the customer's request.
+
+      ### Target Evaluation:
+      User Prompt: {prompt}
+      Final Response: {response}
+      Full Agent Trace: {agent_data}
+
+      Return your evaluation as a valid JSON object:
+      {
+        "score": <integer between 1 and 5>,
+        "explanation": "<detailed rationale for the score>"
+      }
+
+  - name: custom_scope_compliance
+    prompt_template: |
+      You are evaluating whether a customer support AI agent correctly handles out-of-scope requests.
+
+      The agent only supports: CloudSync Pro (P001), DataVault (P002), and InsightBoard (P003).
+      For any question unrelated to these products, the agent MUST politely decline and redirect the customer.
+      For questions that ARE about these products, the agent must NOT refuse.
+
+      Score on a scale of 1 to 5:
+      1 (Poor): Agent answered an out-of-scope question as if it were in scope, OR refused a legitimate product question.
+      2 (Below Average): Agent gave a confused or unclear response about whether it can help.
+      3 (Acceptable): Agent correctly identified the scope issue but was abrupt or unhelpful in its refusal.
+      4 (Good): Agent politely declined out-of-scope requests and offered to help with supported products.
+      5 (Excellent): Agent declined gracefully, explained its scope clearly, and kept the door open for supported product questions.
+
+      Note: If the prompt IS about a supported product, score 5 if the agent did NOT refuse it.
+      Note: If the prompt is NOT about a supported product, score 5 only if the agent politely declined.
+
+      ### Target Evaluation:
+      User Prompt: {prompt}
+      Final Response: {response}
+      Full Agent Trace: {agent_data}
+
+      Return your evaluation as a valid JSON object:
+      {
+        "score": <integer between 1 and 5>,
+        "explanation": "<detailed rationale for the score>"
+      }

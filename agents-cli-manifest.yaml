@@ -1,0 +1,15 @@
+name: "agent-project"
+acli_version: "0.3.0"
+agent_directory: "app"
+region: "us-east1"
+base_template: "adk"
+generated_at: "2026-06-05T07:04:11.419363+00:00"
+language: "python"
+create_params:
+  deployment_target: "agent_runtime"
+  session_type: "none"
+  cicd_runner: "google_cloud_build"
+  include_data_ingestion: false
+  
+  datastore: "none"
+  agent_guidance_filename: "CLAUDE.md"

@@ -1,0 +1,53 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_cloudsync",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product P001? I'm considering purchasing it for my team."}]
+      }
+    },
+    {
+      "eval_case_id": "known_issue_matching",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm getting error code ERR-1001 when trying to sync a large file. What does this mean and how do I fix it?"}]
+      }
+    },
+    {
+      "eval_case_id": "escalation_critical",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "This is urgent — I think we've lost all our data in DataVault. Nothing is restoring and my business is at a complete standstill. I need help immediately!"}]
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Hey, can you recommend a good Italian restaurant near me? I'm hungry and looking for dinner options."}]
+      }
+    },
+    {
+      "eval_case_id": "response_tone_empathy",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've been dealing with this InsightBoard issue for three days now and I'm so frustrated. The alerts for error code ERR-3002 aren't working and my team is missing critical notifications."}]
+      }
+    },
+    {
+      "eval_case_id": "product_lookup_not_found",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you give me details about product P999?"}]
+      }
+    },
+    {
+      "eval_case_id": "unknown_error_escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I keep seeing error code ERR-9999 in CloudSync Pro logs. I can't find anything about it. Can you help?"}]
+      }
+    }
+  ]
+}
