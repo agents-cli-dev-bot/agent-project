@@ -1,0 +1,2138 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "final_response_quality_v1": {
+              "metric_name": "final_response_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer provides the correct information for product PROD123, or correctly states that information for this product could not be found."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer states, \"Product **PROD123** is a smart thermostat. Please note that a common issue associated with this device is Wi-Fi disconnection.\" This information is directly and accurately extracted from the trusted evidence."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer is written in a professional, helpful, and polite tone."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer is written in a professional, helpful, and polite tone. It directly answers the question and offers further assistance, consistent with the developer instructions."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            },
+            "multi_turn_tool_use_quality_v1": {
+              "metric_name": "multi_turn_tool_use_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "4d3ad2e8",
+                    "content": {
+                      "property": {
+                        "description": "The agent calls the `lookup_product_info` function."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call in the conversation history. In Turn 1, the agent calls `lookup_product_info({\"product_id\": \"PROD123\"})`.\nStep 2: Compare the actual function name against the property requirements. The function name `lookup_product_info` matches the property.\nStep 3: Check for schema validity or argument errors. The call is correctly formatted."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "840c41e5",
+                    "content": {
+                      "property": {
+                        "description": "The tool call adheres to the schema (valid JSON, `product_id` parameter present)."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call in the conversation history. In Turn 1, the agent calls `lookup_product_info({\"product_id\": \"PROD123\"})`.\nStep 2: Compare the actual arguments against the schema requirements. The argument is passed as a JSON object `{\"product_id\": \"PROD123\"}`.\nStep 3: Check for schema validity or argument errors. The parameter `product_id` is present and valid according to the tool definition."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "c54c46b3",
+                    "content": {
+                      "property": {
+                        "description": "The `product_id` parameter is exactly 'PROD123'."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call in the conversation history. In Turn 1, the agent calls `lookup_product_info({\"product_id\": \"PROD123\"})`.\nStep 2: Compare the actual value of `product_id` against the required value 'PROD123'.\nStep 3: Check for exact match. The value in the tool call is \"PROD123\", which is an exact match."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "final_response_quality_v1": {
+              "metric_name": "final_response_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer addresses the user's request regarding the 'ERR-WIFI' error code by either providing troubleshooting steps, stating that no information could be found, or confirming that the issue has been escalated to a human agent."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer directly uses the information from the trusted evidence to explain the error and provide the troubleshooting step (connecting to a 2.4GHz network). It also adds additional helpful advice regarding router settings."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer is written in a professional, helpful, and polite tone."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer uses polite language such as \"To resolve this issue, please connect...\", and offers further assistance with \"Please let me know if you need further assistance or if the issue persists!\". This demonstrates a professional, helpful, and polite tone."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            },
+            "multi_turn_tool_use_quality_v1": {
+              "metric_name": "multi_turn_tool_use_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "e15c09c5",
+                    "content": {
+                      "property": {
+                        "description": "The agent calls the `check_known_issues` function."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call in the conversation history. In Turn 1, the agent calls `check_known_issues({\"error_code\": \"ERR-WIFI\"})`.\nStep 2: Compare the actual function name against the property requirement. The function name `check_known_issues` matches.\nStep 3: The tool call is present and relevant to the user's implied problem."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "13573d4e",
+                    "content": {
+                      "property": {
+                        "description": "The tool call adheres to the schema (valid JSON, `error_code` parameter present)."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call arguments in the conversation history. The arguments are `{\"error_code\": \"ERR-WIFI\"}`.\nStep 2: Compare the arguments against the tool definition schema. The schema for `check_known_issues` requires an `error_code` parameter of type string.\nStep 3: The arguments are formatted correctly as a JSON object and the required parameter `error_code` is present."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "6899a837",
+                    "content": {
+                      "property": {
+                        "description": "The `error_code` parameter is exactly 'ERR-WIFI'."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the `error_code` argument in the tool call from Turn 1.\nStep 2: Compare the actual value of the argument against the requirement. The agent passed `error_code=\"ERR-WIFI\"`.\nStep 3: The value is an exact match to the property requirement."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "final_response_quality_v1": {
+              "metric_name": "final_response_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer confirms that the user's case has been escalated to a human agent."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer explicitly states, \"I have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible.\" This directly confirms the escalation to a human agent, consistent with the tool call and response."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer acknowledges the seriousness and urgency of the situation described by the user (i.e., sparking and fire)."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer begins with \"**Please ensure your immediate safety first:**\" and provides critical safety instructions such as \"Call emergency services (such as 911 or your local fire department) immediately,\" \"Evacuate the area,\" and warnings about electrical fires. It also mentions the case was escalated with \"**CRITICAL priority**\". This clearly acknowledges the seriousness and urgency of the user's situation."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer does not ask for a product ID or an error code."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer provides safety instructions and confirms escalation, but does not contain any questions or requests for a product ID or an error code."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The tone of the final answer is professional, helpful, and polite."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer maintains a professional and polite tone (\"Please ensure your immediate safety first,\" \"I have escalated your case,\" \"Please focus on your safety and emergency personnel right now\") while being extremely helpful by providing immediate, actionable safety advice."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            },
+            "multi_turn_tool_use_quality_v1": {
+              "metric_name": "multi_turn_tool_use_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "50b129cc",
+                    "content": {
+                      "property": {
+                        "description": "The agent calls the `escalate_to_human` function."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call(s) in the conversation history. In AGENT (customer_support_agent) TURN 1, the agent calls `escalate_to_human`.\nStep 2: Compare the actual function name against the property requirements. The function name `escalate_to_human` matches the requirement.\nStep 3: Check for schema validity or argument errors. The call is properly formatted."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "732b96ed",
+                    "content": {
+                      "property": {
+                        "description": "The tool call adheres to the schema (valid JSON, `case_summary` and `priority` parameters present)."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call in the conversation history. The agent called `escalate_to_human({\"case_summary\": \"...\", \"priority\": \"...\"})`.\nStep 2: Compare the parameters against the tool definition. The tool definition requires `case_summary` and `priority`. Both are present in the call.\nStep 3: Check for schema validity. The tool call uses valid JSON structure for its arguments."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "5b9472b6",
+                    "content": {
+                      "property": {
+                        "description": "The `case_summary` parameter semantically matches the user's report of a thermostat sparking and catching on fire."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Identify the `case_summary` used in the tool call and the context of the user's issue. The summary used is \"Customer's thermostat is sparking and caught on fire. Critical safety hazard.\"\nStep 2: Compare the actual argument against the semantic requirement. The summary directly addresses the fire and sparking thermostat situation described in the dialogue.\nStep 3: Check for errors. The argument is semantically correct and descriptive."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "c07c3dc6",
+                    "content": {
+                      "property": {
+                        "description": "The `priority` parameter is set to 'critical'."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call in the conversation history. In AGENT TURN 1, the agent calls `escalate_to_human`.\nStep 2: Compare the value of the `priority` argument. The agent set `priority` to \"critical\".\nStep 3: Check for an exact match. The value \"critical\" matches the property requirement exactly."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "final_response_quality_v1": {
+              "metric_name": "final_response_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer refuses to provide a recipe for chocolate chip cookies."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer explicitly states, \"I cannot provide recipes or assistance with out-of-scope topics,\" which directly refuses the user's request for a chocolate chip cookie recipe."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer states that the request is out of scope for its role as a customer support agent."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer clearly defines its scope by stating, \"I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues,\" and then concludes, \"I cannot provide recipes or assistance with out-of-scope topics.\" This directly indicates the request is out of scope."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer is written in a professional, helpful, and polite tone."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer uses polite phrasing such as \"I apologize,\" and \"please feel free to ask!\", and maintains a professional demeanor by clearly explaining its limitations and offering assistance within its defined scope. This demonstrates a professional, helpful, and polite tone."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            },
+            "multi_turn_tool_use_quality_v1": {
+              "metric_name": "multi_turn_tool_use_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "2567e098",
+                    "content": {
+                      "property": {
+                        "description": "The agent makes no tool calls, as providing a recipe is out-of-scope and should be politely refused."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call(s) or user inputs in the conversation history. In AGENT TURN 1, the agent responds with text but does not initiate any tool calls.\nStep 2: Compare the actual function name and arguments against the property requirements. The property is a negative constraint requiring no tool calls. The dialogue shows the agent explicitly stated it cannot provide recipes and restricted its assistance to product-related inquiries.\nStep 3: The agent correctly identified the request as out-of-scope and refrained from calling any tools (like lookup_product_info or check_known_issues), adhering to the system instructions."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 4,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "final_response_quality_v1": {
+              "metric_name": "final_response_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer explains that more information is needed to diagnose the problem with 'PROD123' and asks the user to provide these details."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer explicitly asks for more information: \"Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)? Is there an error code displayed on the device screen or in the companion app? Please share any error codes or details about what you're seeing, and I'll be glad to help resolve it!\""
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer is written in a professional, helpful, and polite tone."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The tone of the final answer is professional, helpful, and polite, using phrases like \"To help you troubleshoot\" and \"I'll be glad to help resolve it!\"."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "The final answer suggests specific types of information that would be helpful, for example, an error code or a description of the problem."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer asks for \"specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)\" which is a description of the problem, and \"an error code displayed on the device screen or in the companion app\"."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": null,
+                    "content": {
+                      "property": {
+                        "description": "If the final answer does not ask for more information to diagnose the problem, it includes a statement indicating that a new evaluation case has been drafted for the feedback loop."
+                      }
+                    },
+                    "type": "",
+                    "importance": "MEDIUM"
+                  },
+                  "verdict": true,
+                  "reasoning": "The final answer does ask for more information to diagnose the problem, as confirmed by the first property. Therefore, the condition for this property is not met, and it is not applicable."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            },
+            "multi_turn_tool_use_quality_v1": {
+              "metric_name": "multi_turn_tool_use_quality_v1",
+              "score": 1.0,
+              "explanation": "",
+              "rubric_verdicts": [
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "875a9459",
+                    "content": {
+                      "property": {
+                        "description": "The agent calls the `lookup_product_info` function to retrieve information for the specified product."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the relevant tool call(s) in the conversation history. In AGENT TURN 1, the agent calls `lookup_product_info({\"product_id\": \"PROD123\"})`.\nStep 2: Compare the actual function name and arguments. The function name `lookup_product_info` matches the requirement.\nStep 3: Check for schema validity or argument errors. The call is correctly formed to retrieve info for the product identified in the dialogue."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "795909b4",
+                    "content": {
+                      "property": {
+                        "description": "The `lookup_product_info` tool call adheres to the schema (valid JSON, `product_id` parameter present)."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the tool call `lookup_product_info({\"product_id\": \"PROD123\"})` in AGENT TURN 1.\nStep 2: Check the parameters against the tool definition. The tool definition requires `product_id`. The call includes `product_id` within a valid JSON structure.\nStep 3: Verify the type. The `product_id` is a string, which matches the schema."
+                },
+                {
+                  "evaluated_rubric": {
+                    "rubric_id": "c8873f9e",
+                    "content": {
+                      "property": {
+                        "description": "The `product_id` parameter in the `lookup_product_info` call is set to 'PROD123'."
+                      }
+                    },
+                    "type": "",
+                    "importance": "HIGH"
+                  },
+                  "verdict": true,
+                  "reasoning": "Locate the tool call `lookup_product_info({\"product_id\": \"PROD123\"})` in AGENT TURN 1.\nStep 2: Compare the `product_id` value. The value is \"PROD123\".\nStep 3: Check for an exact match. \"PROD123\" matches \"PROD123\"."
+                }
+              ],
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "final_response_quality_v1",
+      "num_cases_total": 5,
+      "num_cases_valid": 5,
+      "num_cases_error": 0,
+      "mean_score": 1.0,
+      "stdev_score": 0.0,
+      "pass_rate": 1.0
+    },
+    {
+      "metric_name": "multi_turn_tool_use_quality_v1",
+      "num_cases_total": 5,
+      "num_cases_valid": 5,
+      "num_cases_error": 0,
+      "mean_score": 1.0,
+      "stdev_score": 0.0,
+      "pass_rate": 1.0
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What can you tell me about product PROD123?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Product **PROD123** is a smart thermostat. \n\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_agent": {
+                "agent_id": "customer_support_agent",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_1405481",
+                            "args": {
+                              "product_id": "PROD123"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:53.498820Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_1405481",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "Product PROD123 is a smart thermostat. Common issues: wifi disconnection."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-08-31T21:29:55.273025Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Product **PROD123** is a smart thermostat. \n\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:55.278465Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I am seeing error code ERR-WIFI on my device. How do I fix it?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \n\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\n\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\n\nPlease let me know if you need further assistance or if the issue persists!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "known_issue_matching",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_agent": {
+                "agent_id": "customer_support_agent",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_4235822",
+                            "args": {
+                              "error_code": "ERR-WIFI"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:53.496755Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_4235822",
+                            "name": "check_known_issues",
+                            "response": {
+                              "result": "ERR-WIFI: Known issue with 5GHz networks. Please use 2.4GHz network."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-08-31T21:29:55.803030Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \n\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\n\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\n\nPlease let me know if you need further assistance or if the issue persists!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:55.808792Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "My thermostat is sparking and caught on fire, I need help immediately!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "**Please ensure your immediate safety first:**\n\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\n2. **Evacuate the area** to a safe location.\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\n\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "appropriate_escalation",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_agent": {
+                "agent_id": "customer_support_agent",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_1579500",
+                            "args": {
+                              "case_summary": "Customer's thermostat is sparking and caught on fire. Critical safety hazard.",
+                              "priority": "critical"
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:53.488315Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_1579500",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Case escalated to human with priority critical. Summary: Customer's thermostat is sparking and caught on fire. Critical safety hazard."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-08-31T21:29:55.913063Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "**Please ensure your immediate safety first:**\n\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\n2. **Evacuate the area** to a safe location.\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\n\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:55.922701Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you give me a recipe for chocolate chip cookies?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \n\nIf you have any questions or need help regarding our products or services, please feel free to ask!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "out_of_scope_refusal",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_agent": {
+                "agent_id": "customer_support_agent",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \n\nIf you have any questions or need help regarding our products or services, please feel free to ask!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:53.516765Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Tell me what's wrong with PROD123 right now.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\n\nTo help you troubleshoot what might be going wrong right now:\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\n2. Is there an error code displayed on the device screen or in the companion app?\n\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "response_tone",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "customer_support_agent": {
+                "agent_id": "customer_support_agent",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_1178047",
+                            "args": {
+                              "product_id": "PROD123"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:53.518479Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_1178047",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "Product PROD123 is a smart thermostat. Common issues: wifi disconnection."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-08-31T21:29:56.057244Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "customer_support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\n\nTo help you troubleshoot what might be going wrong right now:\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\n2. Is there an error code displayed on the device screen or in the companion app?\n\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-08-31T21:29:56.063430Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-08-31T21:30:53.918853Z",
+    "dataset": [
+      {
+        "prompt_display_text": "What can you tell me about product PROD123?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"What can you tell me about product PROD123?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Product **PROD123** is a smart thermostat. \n\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Product **PROD123** is a smart thermostat. \\n\\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_agent\": {\"agent_id\": \"customer_support_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent.\\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\\n\\nCapabilities:\\n1. Lookup product information using lookup_product_info.\\n2. Troubleshoot issues using check_known_issues.\\n3. Escalate to a human agent using escalate_to_human.\\n\\nRules:\\n- Politely refuse out-of-scope questions unrelated to our products.\\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \\\"Feedback loop: drafted new eval case for...\\\").\\n\\nTone: Professional, helpful, and polite.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Lookup product information by product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Product information.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check known issues for a given error code.\\n\\nArgs:\\n    error_code: The error code to check.\\n    \\nReturns:\\n    Known issues and troubleshooting steps.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a case to a human agent.\\n\\nArgs:\\n    case_summary: A summary of the case to escalate.\\n    priority: The priority of the escalation (low, medium, high, critical).\\n    \\nReturns:\\n    Status of the escalation.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_1405481\", \"args\": {\"product_id\": \"PROD123\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:53.498820Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_1405481\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"Product PROD123 is a smart thermostat. Common issues: wifi disconnection.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-08-31T21:29:55.273025Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"text\": \"Product **PROD123** is a smart thermostat. \\n\\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!\"}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:55.278465Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I am seeing error code ERR-WIFI on my device. How do I fix it?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I am seeing error code ERR-WIFI on my device. How do I fix it?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \n\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\n\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\n\nPlease let me know if you need further assistance or if the issue persists!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \\n\\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\\n\\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\\n\\nPlease let me know if you need further assistance or if the issue persists!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_agent\": {\"agent_id\": \"customer_support_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent.\\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\\n\\nCapabilities:\\n1. Lookup product information using lookup_product_info.\\n2. Troubleshoot issues using check_known_issues.\\n3. Escalate to a human agent using escalate_to_human.\\n\\nRules:\\n- Politely refuse out-of-scope questions unrelated to our products.\\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \\\"Feedback loop: drafted new eval case for...\\\").\\n\\nTone: Professional, helpful, and polite.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Lookup product information by product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Product information.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check known issues for a given error code.\\n\\nArgs:\\n    error_code: The error code to check.\\n    \\nReturns:\\n    Known issues and troubleshooting steps.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a case to a human agent.\\n\\nArgs:\\n    case_summary: A summary of the case to escalate.\\n    priority: The priority of the escalation (low, medium, high, critical).\\n    \\nReturns:\\n    Status of the escalation.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_4235822\", \"args\": {\"error_code\": \"ERR-WIFI\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:53.496755Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_4235822\", \"name\": \"check_known_issues\", \"response\": {\"result\": \"ERR-WIFI: Known issue with 5GHz networks. Please use 2.4GHz network.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-08-31T21:29:55.803030Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"text\": \"The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \\n\\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\\n\\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\\n\\nPlease let me know if you need further assistance or if the issue persists!\"}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:55.808792Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "My thermostat is sparking and caught on fire, I need help immediately!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"My thermostat is sparking and caught on fire, I need help immediately!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "**Please ensure your immediate safety first:**\n\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\n2. **Evacuate the area** to a safe location.\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\n\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"**Please ensure your immediate safety first:**\\n\\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\\n2. **Evacuate the area** to a safe location.\\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\\n\\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_agent\": {\"agent_id\": \"customer_support_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent.\\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\\n\\nCapabilities:\\n1. Lookup product information using lookup_product_info.\\n2. Troubleshoot issues using check_known_issues.\\n3. Escalate to a human agent using escalate_to_human.\\n\\nRules:\\n- Politely refuse out-of-scope questions unrelated to our products.\\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \\\"Feedback loop: drafted new eval case for...\\\").\\n\\nTone: Professional, helpful, and polite.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Lookup product information by product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Product information.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check known issues for a given error code.\\n\\nArgs:\\n    error_code: The error code to check.\\n    \\nReturns:\\n    Known issues and troubleshooting steps.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a case to a human agent.\\n\\nArgs:\\n    case_summary: A summary of the case to escalate.\\n    priority: The priority of the escalation (low, medium, high, critical).\\n    \\nReturns:\\n    Status of the escalation.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_1579500\", \"args\": {\"case_summary\": \"Customer's thermostat is sparking and caught on fire. Critical safety hazard.\", \"priority\": \"critical\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:53.488315Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_1579500\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Case escalated to human with priority critical. Summary: Customer's thermostat is sparking and caught on fire. Critical safety hazard.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-08-31T21:29:55.913063Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"text\": \"**Please ensure your immediate safety first:**\\n\\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\\n2. **Evacuate the area** to a safe location.\\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\\n\\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now.\"}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:55.922701Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "Can you give me a recipe for chocolate chip cookies?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you give me a recipe for chocolate chip cookies?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \n\nIf you have any questions or need help regarding our products or services, please feel free to ask!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \\n\\nIf you have any questions or need help regarding our products or services, please feel free to ask!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_agent\": {\"agent_id\": \"customer_support_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent.\\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\\n\\nCapabilities:\\n1. Lookup product information using lookup_product_info.\\n2. Troubleshoot issues using check_known_issues.\\n3. Escalate to a human agent using escalate_to_human.\\n\\nRules:\\n- Politely refuse out-of-scope questions unrelated to our products.\\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \\\"Feedback loop: drafted new eval case for...\\\").\\n\\nTone: Professional, helpful, and polite.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Lookup product information by product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Product information.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check known issues for a given error code.\\n\\nArgs:\\n    error_code: The error code to check.\\n    \\nReturns:\\n    Known issues and troubleshooting steps.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a case to a human agent.\\n\\nArgs:\\n    case_summary: A summary of the case to escalate.\\n    priority: The priority of the escalation (low, medium, high, critical).\\n    \\nReturns:\\n    Status of the escalation.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"text\": \"I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \\n\\nIf you have any questions or need help regarding our products or services, please feel free to ask!\"}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:53.516765Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "Tell me what's wrong with PROD123 right now.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Tell me what's wrong with PROD123 right now.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\n\nTo help you troubleshoot what might be going wrong right now:\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\n2. Is there an error code displayed on the device screen or in the companion app?\n\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\\n\\nTo help you troubleshoot what might be going wrong right now:\\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\\n2. Is there an error code displayed on the device screen or in the companion app?\\n\\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"customer_support_agent\": {\"agent_id\": \"customer_support_agent\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent.\\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\\n\\nCapabilities:\\n1. Lookup product information using lookup_product_info.\\n2. Troubleshoot issues using check_known_issues.\\n3. Escalate to a human agent using escalate_to_human.\\n\\nRules:\\n- Politely refuse out-of-scope questions unrelated to our products.\\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \\\"Feedback loop: drafted new eval case for...\\\").\\n\\nTone: Professional, helpful, and polite.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Lookup product information by product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Product information.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check known issues for a given error code.\\n\\nArgs:\\n    error_code: The error code to check.\\n    \\nReturns:\\n    Known issues and troubleshooting steps.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a case to a human agent.\\n\\nArgs:\\n    case_summary: A summary of the case to escalate.\\n    priority: The priority of the escalation (low, medium, high, critical).\\n    \\nReturns:\\n    Status of the escalation.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_1178047\", \"args\": {\"product_id\": \"PROD123\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:53.518479Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_1178047\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"Product PROD123 is a smart thermostat. Common issues: wifi disconnection.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-08-31T21:29:56.057244Z\"}, {\"author\": \"customer_support_agent\", \"content\": {\"parts\": [{\"text\": \"PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\\n\\nTo help you troubleshoot what might be going wrong right now:\\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\\n2. Is there an error code displayed on the device screen or in the companion app?\\n\\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!\"}], \"role\": \"model\"}, \"event_time\": \"2026-08-31T21:29:56.063430Z\"}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}

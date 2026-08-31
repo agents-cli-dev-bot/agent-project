@@ -1,0 +1,39 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What can you tell me about product PROD123?"}]
+      }
+    },
+    {
+      "eval_case_id": "known_issue_matching",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I am seeing error code ERR-WIFI on my device. How do I fix it?"}]
+      }
+    },
+    {
+      "eval_case_id": "appropriate_escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My thermostat is sparking and caught on fire, I need help immediately!"}]
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you give me a recipe for chocolate chip cookies?"}]
+      }
+    },
+    {
+      "eval_case_id": "response_tone",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Tell me what's wrong with PROD123 right now."}]
+      }
+    }
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "What can you tell me about product PROD123?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Product **PROD123** is a smart thermostat. \n\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "product_lookup",
+      "agent_data": {
+        "agents": {
+          "customer_support_agent": {
+            "agent_id": "customer_support_agent",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1405481",
+                        "args": {
+                          "product_id": "PROD123"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:53.498820Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1405481",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "result": "Product PROD123 is a smart thermostat. Common issues: wifi disconnection."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-08-31T21:29:55.273025Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Product **PROD123** is a smart thermostat. \n\nPlease note that a common issue associated with this device is Wi-Fi disconnection. If you need assistance with setup, troubleshooting Wi-Fi connectivity, or have any other questions regarding this product, please feel free to ask!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:55.278465Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "I am seeing error code ERR-WIFI on my device. How do I fix it?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \n\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\n\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\n\nPlease let me know if you need further assistance or if the issue persists!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "known_issue_matching",
+      "agent_data": {
+        "agents": {
+          "customer_support_agent": {
+            "agent_id": "customer_support_agent",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_4235822",
+                        "args": {
+                          "error_code": "ERR-WIFI"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:53.496755Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_4235822",
+                        "name": "check_known_issues",
+                        "response": {
+                          "result": "ERR-WIFI: Known issue with 5GHz networks. Please use 2.4GHz network."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-08-31T21:29:55.803030Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The error code **ERR-WIFI** indicates a known compatibility issue when connecting to a 5GHz Wi-Fi network. \n\nTo resolve this issue, please connect your device to a **2.4GHz Wi-Fi network** instead.\n\nIf your router uses a single network name (SSID) for both 2.4GHz and 5GHz bands, you may need to temporarily separate the bands in your router settings or enable a 2.4GHz guest network for the device.\n\nPlease let me know if you need further assistance or if the issue persists!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:55.808792Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "My thermostat is sparking and caught on fire, I need help immediately!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "**Please ensure your immediate safety first:**\n\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\n2. **Evacuate the area** to a safe location.\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\n\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "appropriate_escalation",
+      "agent_data": {
+        "agents": {
+          "customer_support_agent": {
+            "agent_id": "customer_support_agent",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1579500",
+                        "args": {
+                          "case_summary": "Customer's thermostat is sparking and caught on fire. Critical safety hazard.",
+                          "priority": "critical"
+                        },
+                        "name": "escalate_to_human"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:53.488315Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1579500",
+                        "name": "escalate_to_human",
+                        "response": {
+                          "result": "Case escalated to human with priority critical. Summary: Customer's thermostat is sparking and caught on fire. Critical safety hazard."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-08-31T21:29:55.913063Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "**Please ensure your immediate safety first:**\n\n1. **Call emergency services (such as 911 or your local fire department) immediately.**\n2. **Evacuate the area** to a safe location.\n3. If it is safe to do so without endangering yourself, switch off the main electrical breaker for your heating/cooling system. Do **not** attempt to touch or extinguish an active electrical fire with water.\n\nI have escalated your case with **CRITICAL priority** to our emergency safety and human support team. A representative will follow up with you as soon as possible. Please focus on your safety and emergency personnel right now."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:55.922701Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can you give me a recipe for chocolate chip cookies?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \n\nIf you have any questions or need help regarding our products or services, please feel free to ask!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "out_of_scope_refusal",
+      "agent_data": {
+        "agents": {
+          "customer_support_agent": {
+            "agent_id": "customer_support_agent",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I apologize, but I am only able to assist with inquiries related to our products, technical troubleshooting, and support issues. I cannot provide recipes or assistance with out-of-scope topics. \n\nIf you have any questions or need help regarding our products or services, please feel free to ask!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:53.516765Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Tell me what's wrong with PROD123 right now."
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\n\nTo help you troubleshoot what might be going wrong right now:\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\n2. Is there an error code displayed on the device screen or in the companion app?\n\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "response_tone",
+      "agent_data": {
+        "agents": {
+          "customer_support_agent": {
+            "agent_id": "customer_support_agent",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent.\nYour primary tasks are to answer product questions, troubleshoot common issues, and escalate complex cases.\n\nCapabilities:\n1. Lookup product information using lookup_product_info.\n2. Troubleshoot issues using check_known_issues.\n3. Escalate to a human agent using escalate_to_human.\n\nRules:\n- Politely refuse out-of-scope questions unrelated to our products.\n- Evaluate your own responses. If you provide a weak response, or if the user indicates your answer was inadequate, formulate a new evaluation case and add it to your internal feedback log (simulated by stating \"Feedback loop: drafted new eval case for...\").\n\nTone: Professional, helpful, and polite.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Lookup product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Product information.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check known issues for a given error code.\n\nArgs:\n    error_code: The error code to check.\n    \nReturns:\n    Known issues and troubleshooting steps.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a case to a human agent.\n\nArgs:\n    case_summary: A summary of the case to escalate.\n    priority: The priority of the escalation (low, medium, high, critical).\n    \nReturns:\n    Status of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1178047",
+                        "args": {
+                          "product_id": "PROD123"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:53.518479Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1178047",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "result": "Product PROD123 is a smart thermostat. Common issues: wifi disconnection."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-08-31T21:29:56.057244Z"
+              },
+              {
+                "author": "customer_support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "PROD123 is a smart thermostat. The most common known issue reported for this device is **Wi-Fi disconnection**.\n\nTo help you troubleshoot what might be going wrong right now:\n1. Are you experiencing Wi-Fi connectivity issues, or is there a specific symptom you are observing (e.g., blank screen, temperature reading inaccuracy, unresponsive controls)?\n2. Is there an error code displayed on the device screen or in the companion app?\n\nPlease share any error codes or details about what you're seeing, and I'll be glad to help resolve it!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-08-31T21:29:56.063430Z"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
