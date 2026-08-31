@@ -16,7 +16,7 @@
 resource "google_bigquery_dataset" "telemetry_dataset" {
   for_each      = local.deploy_project_ids
   project       = each.value
-  dataset_id    = replace("${var.project_name}_telemetry", "-", "_")
+  dataset_id    = replace("${var.project_name}_telemetry_${each.key}", "-", "_")
   friendly_name = "${var.project_name} Telemetry"
   location      = var.region
   description   = "Dataset for GenAI telemetry data stored in GCS"
