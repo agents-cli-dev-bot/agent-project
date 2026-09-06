@@ -1,0 +1,125 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_cloudsync",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product P001? I want to know what it does and how much it costs."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "CloudSync Pro (P001) is an enterprise cloud storage and file synchronization solution priced at $29/user/month. It offers real-time sync, 256-bit AES encryption, up to 10TB storage, team collaboration, and 90-day version history. It supports Windows, macOS, Linux, iOS, and Android."}]
+        }
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "lookup_product_info",
+          "tool_input": {"product_id": "P001"}
+        }
+      ]
+    },
+    {
+      "eval_case_id": "known_issue_e001_sync_stall",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm getting error E001 on CloudSync Pro. My files stopped syncing. What should I do?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "Error E001 is a known issue where CloudSync Pro sync stalls after a sleep/wake cycle. The workaround is to quit and relaunch the CloudSync Pro desktop client from the system tray or menu bar. A permanent fix is expected in v4.2.1."}]
+        }
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "check_known_issues",
+          "tool_input": {"error_code": "E001"}
+        }
+      ]
+    },
+    {
+      "eval_case_id": "escalation_data_loss_risk",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I think DataVault Backup corrupted my files during the last backup job and now I can't restore them. This is a production database and we need it urgently!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I understand this is urgent — potential data loss on a production database is critical. I'm escalating this immediately to our specialist team with critical priority. You'll receive a response within 1 hour."}]
+        }
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "escalate_to_human",
+          "tool_input": {"priority": "critical"}
+        }
+      ]
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you help me write a Python script to scrape a website?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "tone_empathy_frustrated_user",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "This is ridiculous! My VPN keeps dropping every time I switch to a different WiFi network. I have a critical meeting in 30 minutes and I can't work like this!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I'm really sorry you're dealing with this right before an important meeting — that's incredibly stressful. The VPN drop on network switch is a known issue (E003). You can fix it immediately by enabling Auto-Reconnect: go to Settings → Connection → Enable Auto-Reconnect. Updating to v3.1.0 also permanently resolves this. I hope this gets you back online in time for your meeting."}]
+        }
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "check_known_issues",
+          "tool_input": {"error_code": "E003"}
+        }
+      ]
+    },
+    {
+      "eval_case_id": "product_lookup_invalid_id",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What can you tell me about product P999?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I wasn't able to find a product with the ID P999. Our available products are P001 (CloudSync Pro), P002 (DataVault Backup), and P003 (SecureConnect VPN). Could you double-check the product ID, or let me know which product you're interested in?"}]
+        }
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "lookup_product_info",
+          "tool_input": {"product_id": "P999"}
+        }
+      ]
+    },
+    {
+      "eval_case_id": "out_of_scope_weather",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What's the weather like in London today?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"}]
+        }
+      }
+    }
+  ]
+}

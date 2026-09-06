@@ -1,0 +1,11 @@
+{
+  "remote_agent_runtime_id": "None",
+  "deployment_timestamp": "None",
+  "pending_operation": {
+    "operation_name": "projects/569187589892/locations/us-east1/reasoningEngines/9069528369896357888/operations/8898341212679831552",
+    "project": "agents-cli-test-cicd-u75kiv",
+    "location": "us-east1",
+    "deployment_target": "agent_runtime",
+    "started_at": "2026-09-06T08:49:07.666386+00:00"
+  }
+}

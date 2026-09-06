@@ -1,0 +1,1435 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can you tell me about product P001? I want to know what it does and how much it costs."
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Here are the details for **CloudSync Pro (P001)**:\n\n### **Overview**\n**CloudSync Pro** is an enterprise cloud storage and file synchronization solution designed to keep your team's files securely synced and accessible across all devices.\n\n### **Key Features**\n- **Real-time Synchronization** across devices\n- **256-bit AES Encryption** for top-tier data security\n- **Up to 10TB Storage** per user/account\n- **Team Collaboration** tools\n- **Version History** tracking for up to 90 days\n- **Supported Platforms:** Windows, macOS, Linux, iOS, and Android\n\n### **Pricing**\n- **$29 per user / month**\n\n---\n\nDoes this help answer your question, or is there anything else I can assist you with regarding CloudSync Pro?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "CloudSync Pro (P001) is an enterprise cloud storage and file synchronization solution priced at $29/user/month. It offers real-time sync, 256-bit AES encryption, up to 10TB storage, team collaboration, and 90-day version history. It supports Windows, macOS, Linux, iOS, and Android."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "product_lookup_cloudsync",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1380031",
+                        "args": {
+                          "product_id": "P001"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.095638Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1380031",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "found": true,
+                          "product_id": "P001",
+                          "name": "CloudSync Pro",
+                          "description": "Enterprise cloud storage and file synchronization solution.",
+                          "features": [
+                            "Real-time sync",
+                            "256-bit AES encryption",
+                            "Up to 10TB storage",
+                            "Team collaboration",
+                            "Version history (90 days)"
+                          ],
+                          "pricing": "$29/user/month",
+                          "supported_platforms": [
+                            "Windows",
+                            "macOS",
+                            "Linux",
+                            "iOS",
+                            "Android"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-09-06T08:33:20.474852Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Here are the details for **CloudSync Pro (P001)**:\n\n### **Overview**\n**CloudSync Pro** is an enterprise cloud storage and file synchronization solution designed to keep your team's files securely synced and accessible across all devices.\n\n### **Key Features**\n- **Real-time Synchronization** across devices\n- **256-bit AES Encryption** for top-tier data security\n- **Up to 10TB Storage** per user/account\n- **Team Collaboration** tools\n- **Version History** tracking for up to 90 days\n- **Supported Platforms:** Windows, macOS, Linux, iOS, and Android\n\n### **Pricing**\n- **$29 per user / month**\n\n---\n\nDoes this help answer your question, or is there anything else I can assist you with regarding CloudSync Pro?"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:20.477157Z"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "lookup_product_info",
+          "tool_input": {
+            "product_id": "P001"
+          }
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "I'm getting error E001 on CloudSync Pro. My files stopped syncing. What should I do?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm really sorry to hear that your files have stopped syncing—I know how frustrating sync interruptions can be when you rely on your files being up to date.\n\nThis is a known issue (Error **E001**) where CloudSync Pro can stall after your computer wakes from sleep mode. Our engineering team is currently working on a permanent fix, which is scheduled to be released in the upcoming version 4.2.1 patch.\n\nIn the meantime, you can easily get your files syncing again with this workaround:\n1. **Quit CloudSync Pro** completely by right-clicking the icon in your system tray (Windows) or menu bar (macOS) and selecting **Quit / Exit**.\n2. **Relaunch CloudSync Pro** from your applications menu or desktop shortcut.\n\nOnce relaunched, your sync should resume automatically. \n\nCould you please give that a try and let me know if it resolves the issue for you?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "Error E001 is a known issue where CloudSync Pro sync stalls after a sleep/wake cycle. The workaround is to quit and relaunch the CloudSync Pro desktop client from the system tray or menu bar. A permanent fix is expected in v4.2.1."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "known_issue_e001_sync_stall",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_15680",
+                        "args": {
+                          "error_code": "E001"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.108781Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_15680",
+                        "name": "check_known_issues",
+                        "response": {
+                          "found": true,
+                          "error_code": "E001",
+                          "title": "Sync stalls after sleep/wake cycle",
+                          "affected_products": [
+                            "CloudSync Pro"
+                          ],
+                          "description": "Files may stop syncing after the device wakes from sleep. Restart the CloudSync Pro desktop client to resume sync.",
+                          "workaround": "Quit and relaunch CloudSync Pro from the system tray or menu bar.",
+                          "status": "Fix in progress — patch expected in v4.2.1 (ETA: 2 weeks)"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-09-06T08:33:21.039302Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm really sorry to hear that your files have stopped syncing—I know how frustrating sync interruptions can be when you rely on your files being up to date.\n\nThis is a known issue (Error **E001**) where CloudSync Pro can stall after your computer wakes from sleep mode. Our engineering team is currently working on a permanent fix, which is scheduled to be released in the upcoming version 4.2.1 patch.\n\nIn the meantime, you can easily get your files syncing again with this workaround:\n1. **Quit CloudSync Pro** completely by right-clicking the icon in your system tray (Windows) or menu bar (macOS) and selecting **Quit / Exit**.\n2. **Relaunch CloudSync Pro** from your applications menu or desktop shortcut.\n\nOnce relaunched, your sync should resume automatically. \n\nCould you please give that a try and let me know if it resolves the issue for you?"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:21.041686Z"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "check_known_issues",
+          "tool_input": {
+            "error_code": "E001"
+          }
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "I think DataVault Backup corrupted my files during the last backup job and now I can't restore them. This is a production database and we need it urgently!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I completely understand how critical and stressful this situation is with your production database, and I am so sorry you are dealing with this.\n\nBecause this involves potential data loss and an urgent production system, I have immediately escalated your case to our senior technical support team with **critical priority**.\n\nHere are your escalation details:\n- **Ticket ID:** `TKT-364799`\n- **Priority:** Critical\n- **Expected Response SLA:** Within 1 hour\n\nA specialist is being assigned to your case right away and will contact you directly to assist with the database recovery. In the meantime, please avoid making any further changes or overwriting backup logs/files so our team can perform full diagnostics."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I understand this is urgent — potential data loss on a production database is critical. I'm escalating this immediately to our specialist team with critical priority. You'll receive a response within 1 hour."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "escalation_data_loss_risk",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_997928",
+                        "args": {
+                          "case_summary": "DataVault Backup job suspected of corrupting files; user unable to restore critical production database. Urgent data loss risk.",
+                          "priority": "critical"
+                        },
+                        "name": "escalate_to_human"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.099090Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_997928",
+                        "name": "escalate_to_human",
+                        "response": {
+                          "escalated": true,
+                          "ticket_id": "TKT-364799",
+                          "priority": "critical",
+                          "sla": "1 hour",
+                          "message": "Your case has been escalated to our support team (ticket TKT-364799). A specialist will contact you within 1 hour.",
+                          "case_summary": "DataVault Backup job suspected of corrupting files; user unable to restore critical production database. Urgent data loss risk."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-09-06T08:33:21.555650Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I completely understand how critical and stressful this situation is with your production database, and I am so sorry you are dealing with this.\n\nBecause this involves potential data loss and an urgent production system, I have immediately escalated your case to our senior technical support team with **critical priority**.\n\nHere are your escalation details:\n- **Ticket ID:** `TKT-364799`\n- **Priority:** Critical\n- **Expected Response SLA:** Within 1 hour\n\nA specialist is being assigned to your case right away and will contact you directly to assist with the database recovery. In the meantime, please avoid making any further changes or overwriting backup logs/files so our team can perform full diagnostics."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:21.557844Z"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "escalate_to_human",
+          "tool_input": {
+            "priority": "critical"
+          }
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can you help me write a Python script to scrape a website?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "out_of_scope_refusal",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.112613Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "This is ridiculous! My VPN keeps dropping every time I switch to a different WiFi network. I have a critical meeting in 30 minutes and I can't work like this!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I completely understand how stressful and frustrating this is, especially with an important meeting starting in just 30 minutes. Let's get this sorted out right away so you can get back to work.\n\nThis is a known issue where SecureConnect VPN drops its tunnel when switching between Wi-Fi networks. \n\n### **Immediate Quick Fix:**\nYou can keep your connection stable by enabling **Auto-Reconnect**:\n1. Open **SecureConnect VPN**.\n2. Go to **Settings** → **Connection**.\n3. Toggle on **Enable Auto-Reconnect**.\n\n### **Permanent Solution:**\nWhen you have a moment after your meeting, updating your SecureConnect VPN app to **version 3.1.0** (or later) resolves this issue permanently.\n\nPlease try enabling Auto-Reconnect now. Does this get your connection stabilized and ready for your meeting?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I'm really sorry you're dealing with this right before an important meeting — that's incredibly stressful. The VPN drop on network switch is a known issue (E003). You can fix it immediately by enabling Auto-Reconnect: go to Settings → Connection → Enable Auto-Reconnect. Updating to v3.1.0 also permanently resolves this. I hope this gets you back online in time for your meeting."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "tone_empathy_frustrated_user",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1072532",
+                        "args": {
+                          "product_id": "P003"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.116057Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1072532",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "found": true,
+                          "product_id": "P003",
+                          "name": "SecureConnect VPN",
+                          "description": "Business-grade VPN for secure remote access.",
+                          "features": [
+                            "Zero-trust architecture",
+                            "Multi-factor authentication",
+                            "Split tunneling",
+                            "Dedicated IP addresses",
+                            "24/7 monitoring"
+                          ],
+                          "pricing": "$10/user/month",
+                          "supported_platforms": [
+                            "Windows",
+                            "macOS",
+                            "Linux",
+                            "iOS",
+                            "Android"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-09-06T08:33:20.910606Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1062075",
+                        "args": {
+                          "error_code": "E001"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    },
+                    {
+                      "function_call": {
+                        "id": "call_1062076",
+                        "args": {
+                          "error_code": "E002"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    },
+                    {
+                      "function_call": {
+                        "id": "call_1062077",
+                        "args": {
+                          "error_code": "E003"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:20.912628Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1062075",
+                        "name": "check_known_issues",
+                        "response": {
+                          "found": true,
+                          "error_code": "E001",
+                          "title": "Sync stalls after sleep/wake cycle",
+                          "affected_products": [
+                            "CloudSync Pro"
+                          ],
+                          "description": "Files may stop syncing after the device wakes from sleep. Restart the CloudSync Pro desktop client to resume sync.",
+                          "workaround": "Quit and relaunch CloudSync Pro from the system tray or menu bar.",
+                          "status": "Fix in progress — patch expected in v4.2.1 (ETA: 2 weeks)"
+                        }
+                      }
+                    },
+                    {
+                      "function_response": {
+                        "id": "call_1062076",
+                        "name": "check_known_issues",
+                        "response": {
+                          "found": true,
+                          "error_code": "E002",
+                          "title": "Backup job fails with 'quota exceeded' despite available storage",
+                          "affected_products": [
+                            "DataVault Backup"
+                          ],
+                          "description": "A metadata indexing bug causes the quota counter to over-report usage. The actual data is safely stored.",
+                          "workaround": "Navigate to Settings → Storage → Recalculate Usage. The counter resets within 5 minutes.",
+                          "status": "Resolved in v2.8.4 — update your client to fix permanently."
+                        }
+                      }
+                    },
+                    {
+                      "function_response": {
+                        "id": "call_1062077",
+                        "name": "check_known_issues",
+                        "response": {
+                          "found": true,
+                          "error_code": "E003",
+                          "title": "VPN connection drops on network switch",
+                          "affected_products": [
+                            "SecureConnect VPN"
+                          ],
+                          "description": "The VPN tunnel may drop when switching between Wi-Fi networks (e.g., home to office). Reconnect manually or enable Auto-Reconnect.",
+                          "workaround": "Enable Auto-Reconnect: Settings → Connection → Enable Auto-Reconnect.",
+                          "status": "Resolved in v3.1.0 — update to fix permanently."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-09-06T08:33:22.518512Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I completely understand how stressful and frustrating this is, especially with an important meeting starting in just 30 minutes. Let's get this sorted out right away so you can get back to work.\n\nThis is a known issue where SecureConnect VPN drops its tunnel when switching between Wi-Fi networks. \n\n### **Immediate Quick Fix:**\nYou can keep your connection stable by enabling **Auto-Reconnect**:\n1. Open **SecureConnect VPN**.\n2. Go to **Settings** → **Connection**.\n3. Toggle on **Enable Auto-Reconnect**.\n\n### **Permanent Solution:**\nWhen you have a moment after your meeting, updating your SecureConnect VPN app to **version 3.1.0** (or later) resolves this issue permanently.\n\nPlease try enabling Auto-Reconnect now. Does this get your connection stabilized and ready for your meeting?"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:22.521878Z"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "check_known_issues",
+          "tool_input": {
+            "error_code": "E003"
+          }
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "What can you tell me about product P999?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I wasn't able to find a product with the ID **P999**. \n\nOur current software products include:\n- **CloudSync Pro** (`P001`)\n- **DataVault Backup** (`P002`)\n- **SecureConnect VPN** (`P003`)\n\nCould you please double-check the product ID or name? I'd be happy to share details about any of the products listed above!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I wasn't able to find a product with the ID P999. Our available products are P001 (CloudSync Pro), P002 (DataVault Backup), and P003 (SecureConnect VPN). Could you double-check the product ID, or let me know which product you're interested in?"
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "product_lookup_invalid_id",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1433634",
+                        "args": {
+                          "product_id": "P999"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.123081Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1433634",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "found": false,
+                          "error": "No product found with ID 'P999'. Available products: P001, P002, P003."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-09-06T08:33:20.330102Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I wasn't able to find a product with the ID **P999**. \n\nOur current software products include:\n- **CloudSync Pro** (`P001`)\n- **DataVault Backup** (`P002`)\n- **SecureConnect VPN** (`P003`)\n\nCould you please double-check the product ID or name? I'd be happy to share details about any of the products listed above!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:20.332278Z"
+              }
+            ]
+          }
+        ]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "lookup_product_info",
+          "tool_input": {
+            "product_id": "P999"
+          }
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "What's the weather like in London today?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "out_of_scope_weather",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a friendly and professional customer support agent for our software products: CloudSync Pro (P001), DataVault Backup (P002), and SecureConnect VPN (P003).\n\nYour responsibilities:\n1. **Answer product questions** — Use `lookup_product_info` with the relevant product ID to retrieve accurate details about features, pricing, and platform support.\n2. **Troubleshoot known issues** — Use `check_known_issues` with the error code the user provides (or one you identify) to find workarounds and resolution status.\n3. **Escalate complex cases** — Use `escalate_to_human` when:\n   - The issue is not covered by a known error code and you cannot resolve it\n   - The user explicitly requests human assistance\n   - The issue is urgent or business-critical (use priority 'high' or 'critical' accordingly)\n   - You have already attempted a workaround and it did not help\n\nTone guidelines:\n- Be warm, empathetic, and patient — users contacting support are often frustrated.\n- Acknowledge the user's frustration before jumping to solutions.\n- Use plain language; avoid jargon unless the user is clearly technical.\n- Always confirm whether your response resolved the issue before closing.\n\nOut-of-scope policy:\n- Politely decline questions unrelated to our products (e.g., general tech support for third-party software, personal advice, coding help, weather, etc.).\n- Use this exact phrasing for refusals: \"I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?\"\n\nPriority guidelines for escalation:\n- low: general questions or feature requests with no urgency\n- medium: issues affecting productivity but with a workaround available\n- high: issues causing significant business disruption, no workaround\n- critical: complete service outage or data loss risk\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Look up detailed product information by product ID.\n\nArgs:\n    product_id: The unique product identifier (e.g. 'P001', 'P002', 'P003').\n\nReturns:\n    A dict with product details, or an error message if not found.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Check whether a known issue exists for a given error code.\n\nArgs:\n    error_code: The error or issue code reported by the user (e.g. 'E001').\n\nReturns:\n    A dict describing the known issue and workaround, or a not-found message.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the issue and steps already tried.\n    priority: Urgency level — one of 'low', 'medium', 'high', or 'critical'.\n\nReturns:\n    A dict with the escalation ticket ID and expected response SLA.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "critical"
+                          ],
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, that falls outside what I can help with as a product support agent. I'm here to assist with CloudSync Pro, DataVault Backup, and SecureConnect VPN. Is there anything related to those products I can help you with?"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-09-06T08:33:19.126386Z"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
