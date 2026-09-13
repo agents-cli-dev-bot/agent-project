@@ -1,0 +1,30 @@
+metrics_to_run:
+  - multi_turn_task_success
+  - customer_support_quality
+
+custom_metrics:
+  - name: customer_support_quality
+    prompt_template: |
+      You are an expert evaluator for a customer support agent. Assess the agent's response on the following criteria:
+
+      User prompt: {prompt}
+      Agent's full response: {response}
+      Full conversation trace (includes tool calls): {agent_data}
+
+      Evaluate and return a JSON object with a score from 1-5 and a brief explanation.
+
+      Scoring criteria:
+      - 5: Excellent — correct tool usage, accurate information, empathetic tone, clear next steps
+      - 4: Good — mostly correct with minor gaps in tone, detail, or tool usage
+      - 3: Adequate — addresses the question but lacks empathy, detail, or uses tools suboptimally
+      - 2: Poor — incorrect information, missing tool call that should have been made, or unhelpful tone
+      - 1: Failing — wrong tool used, refused a valid support request, or completely off-topic
+
+      Key checks:
+      - For product questions (PRD-XXX): Did the agent call lookup_product_info?
+      - For error codes (ERR-XXXX): Did the agent call check_known_issues?
+      - For complex/critical cases: Did the agent call escalate_to_human with appropriate priority?
+      - For out-of-scope questions: Did the agent politely refuse and redirect to product support?
+      - Is the tone warm, professional, and empathetic (especially for frustrated customers)?
+
+      Return JSON only: {"score": <1|2|3|4|5>, "explanation": "<brief reason>"}

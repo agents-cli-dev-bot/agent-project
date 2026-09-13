@@ -1,0 +1,53 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_cloudsync",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product PRD-001? I'm considering purchasing it for my team."}]
+      }
+    },
+    {
+      "eval_case_id": "known_issue_matching",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm getting error ERR-1001 in CloudSync Pro. Files over 5GB just stop syncing. What should I do?"}]
+      }
+    },
+    {
+      "eval_case_id": "escalation_critical",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Our entire team is locked out of SecureVault right now. We have a major presentation in 2 hours and can't access any of our credentials. This is a complete outage. We need help immediately."}]
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What's the capital of France? Also, can you recommend a good pizza recipe?"}]
+      }
+    },
+    {
+      "eval_case_id": "response_tone_frustrated_customer",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've been having issues with ERR-2001 for weeks and nobody has helped me. Your product is broken and I'm extremely frustrated. What are you going to do about this?"}]
+      }
+    },
+    {
+      "eval_case_id": "product_lookup_unknown",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What are the details for product PRD-999?"}]
+      }
+    },
+    {
+      "eval_case_id": "escalation_low_priority",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I have a general question about AnalyticsEdge. Can you tell me if it supports custom SQL queries? Also I'd like to speak to a human support agent when possible, no rush."}]
+      }
+    }
+  ]
+}
