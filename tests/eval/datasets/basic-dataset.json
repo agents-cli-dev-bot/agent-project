@@ -1,0 +1,65 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_smarthub",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product PRD-001? What are its features and warranty?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "SmartHub Pro supports up to 200 smart devices via Zigbee, Z-Wave, and Wi-Fi. It comes with a 2-year warranty and runs firmware version 3.2.1."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue_e1001",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My device went offline after a firmware update. The error code is E1001. How do I fix this?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "Power-cycle the device by unplugging it for 30 seconds. If still offline, factory-reset by holding the reset button for 10 seconds."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_high_priority",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've tried everything for my CloudCam 4K (PRD-002) but the stream still drops every 20 minutes. Error E1002. I've already power-cycled it, updated the firmware, and moved it closer to the router. Nothing works. I need a human to help me."}]
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What's the best recipe for chocolate chip cookies?"}]
+      }
+    },
+    {
+      "eval_case_id": "response_tone_empathy",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My smart lock (PRD-004) fingerprint reader stopped working in cold weather. I'm really frustrated — I got locked out of my house this morning!"}]
+      }
+    },
+    {
+      "eval_case_id": "product_lookup_unknown",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Tell me about product PRD-999."}]
+      }
+    },
+    {
+      "eval_case_id": "multi_tool_product_and_issue",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I have an EcoThermostat (PRD-003) and my schedule settings aren't being saved. I keep getting error E1003. What should I do?"}]
+      }
+    }
+  ]
+}

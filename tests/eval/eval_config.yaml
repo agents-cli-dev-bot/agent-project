@@ -1,0 +1,118 @@
+metrics_to_run:
+  - custom_response_quality
+  - tool_was_called
+  - out_of_scope_refused
+  - escalation_created
+  - tone_empathetic
+
+custom_metrics:
+  # LLM-as-judge: overall quality (accuracy, relevance, clarity). Score 1-5.
+  - name: custom_response_quality
+    custom_function_file: response_quality.py
+
+  # Deterministic: check if any tool was called in the trace for cases that need tool use.
+  - name: tool_was_called
+    custom_function: |
+      def evaluate(instance):
+          case_id = (instance.get("eval_case_id") or "")
+          tool_cases = {
+              "product_lookup_smarthub",
+              "known_issue_e1001",
+              "escalation_high_priority",
+              "multi_tool_product_and_issue",
+              "product_lookup_unknown",
+              "response_tone_empathy",
+          }
+          if case_id not in tool_cases:
+              return {"score": 1, "explanation": "Not a tool-use case — skipped."}
+
+          agent_data = instance.get("agent_data") or {}
+          turns = agent_data.get("turns") or []
+          for turn in turns:
+              for event in turn.get("events") or []:
+                  content = event.get("content") or {}
+                  for part in content.get("parts") or []:
+                      if part.get("function_call") or part.get("function_response"):
+                          return {"score": 1, "explanation": "Tool call detected in trace."}
+          return {"score": 0, "explanation": "No tool call detected — agent should have called a tool."}
+
+  # Deterministic: out-of-scope cases must result in a refusal (no tool called).
+  # For in-scope cases this metric is skipped (returns 1).
+  - name: out_of_scope_refused
+    custom_function: |
+      def evaluate(instance):
+          case_id = (instance.get("eval_case_id") or "")
+          out_of_scope_cases = {"out_of_scope_refusal"}
+          if case_id not in out_of_scope_cases:
+              return {"score": 1, "explanation": "Not an out-of-scope case — skipped."}
+
+          response_text = ""
+          agent_data = instance.get("agent_data") or {}
+          turns = agent_data.get("turns") or []
+          for turn in turns:
+              for event in turn.get("events") or []:
+                  content = event.get("content") or {}
+                  for part in content.get("parts") or []:
+                      if part.get("function_call"):
+                          return {"score": 0, "explanation": "Agent called a tool for an out-of-scope query — should have refused."}
+                      text = part.get("text", "")
+                      if text:
+                          response_text += text.lower()
+
+          refusal_keywords = ["can't help", "cannot help", "outside", "speciali", "only help", "not able to", "unable to", "beyond", "scope", "product support", "smarthome"]
+          if any(kw in response_text for kw in refusal_keywords):
+              return {"score": 1, "explanation": "Agent politely refused the out-of-scope request."}
+          return {"score": 0, "explanation": "Agent response did not clearly refuse the out-of-scope request."}
+
+  # Deterministic: for escalation cases, verify escalate_to_human was called.
+  # Checks for 'escalate_to_human' function_call in the trace.
+  - name: escalation_created
+    custom_function: |
+      def evaluate(instance):
+          case_id = (instance.get("eval_case_id") or "")
+          escalation_cases = {"escalation_high_priority"}
+          if case_id not in escalation_cases:
+              return {"score": 1, "explanation": "Not an escalation case — skipped."}
+
+          agent_data = instance.get("agent_data") or {}
+          turns = agent_data.get("turns") or []
+          for turn in turns:
+              for event in turn.get("events") or []:
+                  content = event.get("content") or {}
+                  for part in content.get("parts") or []:
+                      fc = part.get("function_call")
+                      if fc and (fc.get("name") == "escalate_to_human"):
+                          return {"score": 1, "explanation": "escalate_to_human was called correctly."}
+
+          # Also check if response text contains a ticket ID as a fallback
+          response_text = instance.get("response", "")
+          if isinstance(response_text, dict):
+              for part in response_text.get("parts", []):
+                  if "TKT-" in part.get("text", ""):
+                      return {"score": 1, "explanation": "Ticket ID found in response — escalation occurred."}
+          return {"score": 0, "explanation": "escalate_to_human was NOT called for a case requiring escalation."}
+
+  # LLM-as-judge: response tone must be empathetic for frustrated-customer cases.
+  - name: tone_empathetic
+    prompt_template: |
+      You are evaluating the tone of a customer support agent's response.
+      The agent should demonstrate empathy — acknowledging customer emotion or difficulty
+      before (or while) offering solutions.
+
+      Here is the user's message:
+      USER: {prompt}
+
+      Here is the agent's response:
+      AGENT: {response}
+
+      Score on this scale:
+      3 = The agent explicitly acknowledges the customer's frustration, inconvenience, or difficulty
+          with warm, empathetic language ("I understand how frustrating...", "I'm sorry to hear...").
+      2 = Neutral and professional. The agent does not dismiss the customer but also does not
+          explicitly validate their emotions.
+      1 = The agent's response is cold, abrupt, or dismissive.
+
+      Note: If the user's message is NOT emotionally charged (e.g., a factual product question),
+      a score of 2 is perfectly appropriate and should NOT be penalized.
+
+      Return ONLY valid JSON: {"score": <1, 2, or 3>, "explanation": "<brief reason>"}
