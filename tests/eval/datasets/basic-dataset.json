@@ -1,0 +1,121 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_prd001",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product PRD-001?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "CloudSync Pro is an enterprise cloud synchronization platform priced at $49/month. It offers real-time sync, 256-bit encryption, and a 99.9% uptime SLA."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "product_lookup_prd002",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What features does DataVault (PRD-002) offer and how much does it cost?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "DataVault (PRD-002) is a secure data storage and backup solution priced at $29/month. Features include automated backups, point-in-time recovery, and cross-region replication."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue_err503",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm getting error ERR-503 when trying to access my account. What does this mean?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "ERR-503 means the service is temporarily unavailable, likely due to high load or maintenance. You should wait 5-10 minutes and retry. You can also check the status page at status.example.com for updates."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue_err_auth001",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My application keeps returning ERR-AUTH-001. How do I fix this?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "ERR-AUTH-001 indicates your authentication token has expired. You need to re-authenticate using your credentials to obtain a new token."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_critical_outage",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Our entire team has been locked out of CloudSync Pro for 2 hours and we're losing critical business data. None of the troubleshooting steps are working. We need urgent help immediately!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I understand this is an urgent situation. I'm escalating this to our human support team with critical priority. You should hear back within 15-30 minutes."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_weather",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What's the weather like in New York today?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I'm sorry, but that question falls outside the scope of our product support. I'm here to help with questions about our software products. Is there anything related to our products I can help you with?"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_competitor",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "How does your product compare to Dropbox?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I'm not able to make comparisons with other products, but I can tell you about our products. I'm here to help with CloudSync Pro, DataVault, and StreamLine API. Would you like details on any of these?"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "response_tone_frustrated_customer",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "This is ridiculous! I've been trying to fix this ERR-SYNC-002 error for days and your product is completely broken! I'm very frustrated!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I completely understand your frustration and I sincerely apologize for the difficulty you've experienced. ERR-SYNC-002 is a sync conflict issue. Here is how to resolve it: open the conflict resolver in your dashboard and manually merge the conflicting changes. If this hasn't worked for you, I can escalate this to a human agent right away."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_medium_priority",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've tried resetting my password twice but I still can't log into DataVault. This is affecting my work but it's not an emergency. Can someone help me directly?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I understand this is disrupting your work. I'll escalate this to our human support team with medium priority so someone can assist you directly. You can expect a response within 4-8 hours."}]
+        }
+      }
+    }
+  ]
+}

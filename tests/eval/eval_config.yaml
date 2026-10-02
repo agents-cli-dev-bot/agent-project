@@ -1,0 +1,54 @@
+metrics_to_run:
+  - custom_response_quality
+  - scope_compliance
+  - tone_quality
+  - agent_turn_count
+
+custom_metrics:
+  # LLM-as-judge for overall response quality
+  - name: custom_response_quality
+    custom_function_file: response_quality.py
+
+  # Checks the agent refuses out-of-scope questions and uses tools for in-scope ones
+  - name: scope_compliance
+    prompt_template: |
+      You are evaluating a customer support agent for software products
+      (CloudSync Pro, DataVault, StreamLine API).
+
+      Score 1-5:
+      5 = Perfect: in-scope → used the right tool and gave accurate info;
+          out-of-scope → politely refused without answering the off-topic question
+      4 = Mostly correct with minor gaps
+      3 = Partially correct (answered but missed a tool call, or partial refusal)
+      2 = Poor (wrong tool, or answered an out-of-scope question)
+      1 = Completely wrong (hallucinated, ignored the question, or helped with off-topic)
+
+      User Prompt: {prompt}
+      Final Response: {response}
+      Full Agent Trace: {agent_data}
+
+      Return JSON: {{"score": <1-5>, "explanation": "<one sentence reason>"}}
+
+  # Checks response tone: empathetic, professional, concise
+  - name: tone_quality
+    prompt_template: |
+      You are evaluating the tone of a customer support agent response.
+
+      Score 1-5:
+      5 = Excellent tone: empathetic, professional, concise, and clear
+      4 = Good tone with minor issues
+      3 = Acceptable but could be warmer or clearer
+      2 = Cold, condescending, or overly verbose
+      1 = Inappropriate, rude, or completely off-tone
+
+      User Prompt: {prompt}
+      Final Response: {response}
+
+      Return JSON: {{"score": <1-5>, "explanation": "<one sentence reason>"}}
+
+  # Counts agent turns (diagnostic metric)
+  - name: agent_turn_count
+    custom_function: |
+      def evaluate(instance):
+          turns = (instance.get("agent_data") or {}).get("turns", [])
+          return {'score': len(turns)}
