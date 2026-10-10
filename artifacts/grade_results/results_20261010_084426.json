@@ -1,0 +1,2070 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": null,
+              "explanation": null,
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": "CustomFunctionError(evaluate): ('Unable to acquire impersonated credentials', '{\\n  \"error\": {\\n    \"code\": 403,\\n    \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\",\\n    \"status\": \"PERMISSION_DENIED\",\\n    \"details\": [\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\\n        \"reason\": \"USER_PROJECT_DENIED\",\\n        \"domain\": \"googleapis.com\",\\n        \"metadata\": {\\n          \"containerInfo\": \"agents-cli-test-cicd-u75kiv\",\\n          \"service\": \"iamcredentials.googleapis.com\",\\n          \"consumer\": \"projects/agents-cli-test-cicd-u75kiv\",\\n          \"consoleUrl\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\"\\n        }\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\\n        \"locale\": \"en-US\",\\n        \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\"\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\\n        \"links\": [\\n          {\\n            \"description\": \"Google developer console IAM admin\",\\n            \"url\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\"\\n          }\\n        ]\\n      }\\n    ]\\n  }\\n}\\n')"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": null,
+              "explanation": null,
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": "CustomFunctionError(evaluate): ('Unable to acquire impersonated credentials', '{\\n  \"error\": {\\n    \"code\": 403,\\n    \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\",\\n    \"status\": \"PERMISSION_DENIED\",\\n    \"details\": [\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\\n        \"reason\": \"USER_PROJECT_DENIED\",\\n        \"domain\": \"googleapis.com\",\\n        \"metadata\": {\\n          \"consoleUrl\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\",\\n          \"service\": \"iamcredentials.googleapis.com\",\\n          \"consumer\": \"projects/agents-cli-test-cicd-u75kiv\",\\n          \"containerInfo\": \"agents-cli-test-cicd-u75kiv\"\\n        }\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\\n        \"locale\": \"en-US\",\\n        \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\"\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\\n        \"links\": [\\n          {\\n            \"description\": \"Google developer console IAM admin\",\\n            \"url\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\"\\n          }\\n        ]\\n      }\\n    ]\\n  }\\n}\\n')"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": null,
+              "explanation": null,
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": "CustomFunctionError(evaluate): ('Unable to acquire impersonated credentials', '{\\n  \"error\": {\\n    \"code\": 403,\\n    \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\",\\n    \"status\": \"PERMISSION_DENIED\",\\n    \"details\": [\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\\n        \"reason\": \"USER_PROJECT_DENIED\",\\n        \"domain\": \"googleapis.com\",\\n        \"metadata\": {\\n          \"service\": \"iamcredentials.googleapis.com\",\\n          \"containerInfo\": \"agents-cli-test-cicd-u75kiv\",\\n          \"consoleUrl\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\",\\n          \"consumer\": \"projects/agents-cli-test-cicd-u75kiv\"\\n        }\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\\n        \"locale\": \"en-US\",\\n        \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\"\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\\n        \"links\": [\\n          {\\n            \"description\": \"Google developer console IAM admin\",\\n            \"url\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\"\\n          }\\n        ]\\n      }\\n    ]\\n  }\\n}\\n')"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": null,
+              "explanation": null,
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": "CustomFunctionError(evaluate): ('Unable to acquire impersonated credentials', '{\\n  \"error\": {\\n    \"code\": 403,\\n    \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\",\\n    \"status\": \"PERMISSION_DENIED\",\\n    \"details\": [\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\\n        \"reason\": \"USER_PROJECT_DENIED\",\\n        \"domain\": \"googleapis.com\",\\n        \"metadata\": {\\n          \"consumer\": \"projects/agents-cli-test-cicd-u75kiv\",\\n          \"consoleUrl\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\",\\n          \"service\": \"iamcredentials.googleapis.com\",\\n          \"containerInfo\": \"agents-cli-test-cicd-u75kiv\"\\n        }\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\\n        \"locale\": \"en-US\",\\n        \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\"\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\\n        \"links\": [\\n          {\\n            \"description\": \"Google developer console IAM admin\",\\n            \"url\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\"\\n          }\\n        ]\\n      }\\n    ]\\n  }\\n}\\n')"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 4,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": null,
+              "explanation": null,
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": "CustomFunctionError(evaluate): ('Unable to acquire impersonated credentials', '{\\n  \"error\": {\\n    \"code\": 403,\\n    \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\",\\n    \"status\": \"PERMISSION_DENIED\",\\n    \"details\": [\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\\n        \"reason\": \"USER_PROJECT_DENIED\",\\n        \"domain\": \"googleapis.com\",\\n        \"metadata\": {\\n          \"consoleUrl\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\",\\n          \"containerInfo\": \"agents-cli-test-cicd-u75kiv\",\\n          \"consumer\": \"projects/agents-cli-test-cicd-u75kiv\",\\n          \"service\": \"iamcredentials.googleapis.com\"\\n        }\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\\n        \"locale\": \"en-US\",\\n        \"message\": \"Caller does not have required permission to use project agents-cli-test-cicd-u75kiv. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv and then retry. Propagation of the new permission may take a few minutes.\"\\n      },\\n      {\\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\\n        \"links\": [\\n          {\\n            \"description\": \"Google developer console IAM admin\",\\n            \"url\": \"https://console.developers.google.com/iam-admin/iam?project=agents-cli-test-cicd-u75kiv\"\\n          }\\n        ]\\n      }\\n    ]\\n  }\\n}\\n')"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "custom_response_quality",
+      "num_cases_total": 5,
+      "num_cases_valid": 0,
+      "num_cases_error": 5,
+      "mean_score": null,
+      "stdev_score": null,
+      "pass_rate": null
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you give me info on PROD123?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I couldn't find any information for product ID **PROD123**. Could you please double-check the product ID and try again? If you have any other questions or need assistance with a different product, feel free to let me know!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent. Your role is to:\n1. Answer product questions using the lookup_product_info tool.\n2. Troubleshoot common issues using the check_known_issues tool.\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\n4. Politely refuse out-of-scope questions unrelated to the product.\n\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Looks up product information based on the product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Checks for known issues associated with a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps or known issue details.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalates a complex case to a human support agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation that the case has been escalated.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Drafts a new evaluation case when a weak response is identified.\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\n\nArgs:\n    weakness_identified: The weakness you identified in your response.\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\n    expected_response: The ideal response you should have given.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                        "name": "draft_eval_case",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "weakness_identified": {
+                              "title": "Weakness Identified",
+                              "type": "string"
+                            },
+                            "proposed_eval_scenario": {
+                              "title": "Proposed Eval Scenario",
+                              "type": "string"
+                            },
+                            "expected_response": {
+                              "title": "Expected Response",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "weakness_identified",
+                            "proposed_eval_scenario",
+                            "expected_response"
+                          ],
+                          "title": "draft_eval_caseParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_182474",
+                            "args": {
+                              "product_id": "PROD123"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:14.895341Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_182474",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "Product PROD123 not found."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-10T08:44:16.446146Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_2200",
+                            "args": {
+                              "expected_response": "I'm sorry, but I couldn't find any information for product ID PROD123. Please verify the product ID and try again.",
+                              "proposed_eval_scenario": "Can you give me info on PROD123?",
+                              "weakness_identified": "The tool lookup_product_info returned 'Product PROD123 not found', preventing me from answering the user's question about this specific product."
+                            },
+                            "name": "draft_eval_case",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:16.448420Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_2200",
+                            "name": "draft_eval_case",
+                            "response": {
+                              "result": "Evaluation case drafted successfully based on weakness: The tool lookup_product_info returned 'Product PROD123 not found', preventing me from answering the user's question about this specific product."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-10T08:44:19.728294Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I couldn't find any information for product ID **PROD123**. Could you please double-check the product ID and try again? If you have any other questions or need assistance with a different product, feel free to let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:19.730685Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'm getting ERR001, what should I do?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I couldn't find any information or troubleshooting steps for error code ERR001 in our database. \n\nI have escalated your case to a human support agent (priority: medium) who will look into this issue and get back to you as soon as possible to help you resolve it.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "known_issue",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent. Your role is to:\n1. Answer product questions using the lookup_product_info tool.\n2. Troubleshoot common issues using the check_known_issues tool.\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\n4. Politely refuse out-of-scope questions unrelated to the product.\n\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Looks up product information based on the product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Checks for known issues associated with a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps or known issue details.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalates a complex case to a human support agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation that the case has been escalated.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Drafts a new evaluation case when a weak response is identified.\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\n\nArgs:\n    weakness_identified: The weakness you identified in your response.\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\n    expected_response: The ideal response you should have given.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                        "name": "draft_eval_case",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "weakness_identified": {
+                              "title": "Weakness Identified",
+                              "type": "string"
+                            },
+                            "proposed_eval_scenario": {
+                              "title": "Proposed Eval Scenario",
+                              "type": "string"
+                            },
+                            "expected_response": {
+                              "title": "Expected Response",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "weakness_identified",
+                            "proposed_eval_scenario",
+                            "expected_response"
+                          ],
+                          "title": "draft_eval_caseParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_8058",
+                            "args": {
+                              "error_code": "ERR001"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:14.902675Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_8058",
+                            "name": "check_known_issues",
+                            "response": {
+                              "result": "No known issues found for error code ERR001."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-10T08:44:16.245307Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_4171",
+                            "args": {
+                              "proposed_eval_scenario": "I'm getting ERR001, what should I do?",
+                              "weakness_identified": "The system does not have information on error code ERR001 in the check_known_issues tool, and I cannot resolve the customer's issue.",
+                              "expected_response": "I'm sorry, but I couldn't find any known issues or troubleshooting steps for error code ERR001 in our system. I will escalate this case to a human support agent to help you resolve this."
+                            },
+                            "name": "draft_eval_case",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:16.247681Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_4171",
+                            "name": "draft_eval_case",
+                            "response": {
+                              "result": "Evaluation case drafted successfully based on weakness: The system does not have information on error code ERR001 in the check_known_issues tool, and I cannot resolve the customer's issue."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-10T08:44:19.093065Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_7637",
+                            "args": {
+                              "priority": "medium",
+                              "case_summary": "Customer is experiencing error code ERR001, which is not found in the known issues database."
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:19.095351Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_7637",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Case escalated to human support. Priority: medium. Summary: Customer is experiencing error code ERR001, which is not found in the known issues database.."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-10T08:44:20.289259Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I couldn't find any information or troubleshooting steps for error code ERR001 in our database. \n\nI have escalated your case to a human support agent (priority: medium) who will look into this issue and get back to you as soon as possible to help you resolve it.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:20.291471Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "My house is on fire and the thermostat is broken, I need human help immediately!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Please get to safety immediately and call your local emergency services (such as 911) if you haven't already done so. Your physical safety is the absolute priority.\n\nI have escalated this issue to our human support team as a critical priority. Please focus on getting to safety.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "escalation",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent. Your role is to:\n1. Answer product questions using the lookup_product_info tool.\n2. Troubleshoot common issues using the check_known_issues tool.\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\n4. Politely refuse out-of-scope questions unrelated to the product.\n\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Looks up product information based on the product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Checks for known issues associated with a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps or known issue details.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalates a complex case to a human support agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation that the case has been escalated.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Drafts a new evaluation case when a weak response is identified.\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\n\nArgs:\n    weakness_identified: The weakness you identified in your response.\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\n    expected_response: The ideal response you should have given.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                        "name": "draft_eval_case",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "weakness_identified": {
+                              "title": "Weakness Identified",
+                              "type": "string"
+                            },
+                            "proposed_eval_scenario": {
+                              "title": "Proposed Eval Scenario",
+                              "type": "string"
+                            },
+                            "expected_response": {
+                              "title": "Expected Response",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "weakness_identified",
+                            "proposed_eval_scenario",
+                            "expected_response"
+                          ],
+                          "title": "draft_eval_caseParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_9257",
+                            "args": {
+                              "case_summary": "Customer reports their house is on fire and their thermostat is broken, requesting immediate human assistance.",
+                              "priority": "critical"
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:14.827286Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_9257",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Case escalated to human support. Priority: critical. Summary: Customer reports their house is on fire and their thermostat is broken, requesting immediate human assistance.."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-10T08:44:17.279155Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Please get to safety immediately and call your local emergency services (such as 911) if you haven't already done so. Your physical safety is the absolute priority.\n\nI have escalated this issue to our human support team as a critical priority. Please focus on getting to safety.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:17.281399Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What is the capital of France?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I cannot answer general knowledge questions like this one. If you have any questions about our products or need technical support, please let me know!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "out_of_scope",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent. Your role is to:\n1. Answer product questions using the lookup_product_info tool.\n2. Troubleshoot common issues using the check_known_issues tool.\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\n4. Politely refuse out-of-scope questions unrelated to the product.\n\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Looks up product information based on the product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Checks for known issues associated with a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps or known issue details.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalates a complex case to a human support agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation that the case has been escalated.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Drafts a new evaluation case when a weak response is identified.\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\n\nArgs:\n    weakness_identified: The weakness you identified in your response.\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\n    expected_response: The ideal response you should have given.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                        "name": "draft_eval_case",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "weakness_identified": {
+                              "title": "Weakness Identified",
+                              "type": "string"
+                            },
+                            "proposed_eval_scenario": {
+                              "title": "Proposed Eval Scenario",
+                              "type": "string"
+                            },
+                            "expected_response": {
+                              "title": "Expected Response",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "weakness_identified",
+                            "proposed_eval_scenario",
+                            "expected_response"
+                          ],
+                          "title": "draft_eval_caseParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I cannot answer general knowledge questions like this one. If you have any questions about our products or need technical support, please let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:14.905097Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Your product sucks.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm really sorry to hear that you're having a frustrating experience. I would love to help make things right. \n\nCould you please share which product you are using and the specific issues you've encountered? With that information, I can look up details or check for troubleshooting steps to help resolve the problem for you.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": null,
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "response_tone",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a customer support agent. Your role is to:\n1. Answer product questions using the lookup_product_info tool.\n2. Troubleshoot common issues using the check_known_issues tool.\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\n4. Politely refuse out-of-scope questions unrelated to the product.\n\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Looks up product information based on the product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Checks for known issues associated with a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps or known issue details.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalates a complex case to a human support agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation that the case has been escalated.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Drafts a new evaluation case when a weak response is identified.\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\n\nArgs:\n    weakness_identified: The weakness you identified in your response.\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\n    expected_response: The ideal response you should have given.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                        "name": "draft_eval_case",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "weakness_identified": {
+                              "title": "Weakness Identified",
+                              "type": "string"
+                            },
+                            "proposed_eval_scenario": {
+                              "title": "Proposed Eval Scenario",
+                              "type": "string"
+                            },
+                            "expected_response": {
+                              "title": "Expected Response",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "weakness_identified",
+                            "proposed_eval_scenario",
+                            "expected_response"
+                          ],
+                          "title": "draft_eval_caseParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm really sorry to hear that you're having a frustrating experience. I would love to help make things right. \n\nCould you please share which product you are using and the specific issues you've encountered? With that information, I can look up details or check for troubleshooting steps to help resolve the problem for you.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-10T08:44:14.906862Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-10-10T08:44:26.340123Z",
+    "dataset": [
+      {
+        "prompt_display_text": "Can you give me info on PROD123?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you give me info on PROD123?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I'm sorry, but I couldn't find any information for product ID **PROD123**. Could you please double-check the product ID and try again? If you have any other questions or need assistance with a different product, feel free to let me know!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I couldn't find any information for product ID **PROD123**. Could you please double-check the product ID and try again? If you have any other questions or need assistance with a different product, feel free to let me know!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent. Your role is to:\\n1. Answer product questions using the lookup_product_info tool.\\n2. Troubleshoot common issues using the check_known_issues tool.\\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\\n4. Politely refuse out-of-scope questions unrelated to the product.\\n\\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Looks up product information based on the product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Information about the product.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Checks for known issues associated with a specific error code.\\n\\nArgs:\\n    error_code: The error code to look up.\\n\\nReturns:\\n    Troubleshooting steps or known issue details.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalates a complex case to a human support agent.\\n\\nArgs:\\n    case_summary: A brief summary of the issue.\\n    priority: The priority level (low, medium, high, critical).\\n\\nReturns:\\n    Confirmation that the case has been escalated.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Drafts a new evaluation case when a weak response is identified.\\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\\n\\nArgs:\\n    weakness_identified: The weakness you identified in your response.\\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\\n    expected_response: The ideal response you should have given.\\n\\nReturns:\\n    Confirmation that the eval case was drafted.\", \"name\": \"draft_eval_case\", \"parameters_json_schema\": {\"properties\": {\"weakness_identified\": {\"title\": \"Weakness Identified\", \"type\": \"string\"}, \"proposed_eval_scenario\": {\"title\": \"Proposed Eval Scenario\", \"type\": \"string\"}, \"expected_response\": {\"title\": \"Expected Response\", \"type\": \"string\"}}, \"required\": [\"weakness_identified\", \"proposed_eval_scenario\", \"expected_response\"], \"title\": \"draft_eval_caseParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_182474\", \"args\": {\"product_id\": \"PROD123\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:14.895341Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_182474\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"Product PROD123 not found.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-10T08:44:16.446146Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_2200\", \"args\": {\"expected_response\": \"I'm sorry, but I couldn't find any information for product ID PROD123. Please verify the product ID and try again.\", \"proposed_eval_scenario\": \"Can you give me info on PROD123?\", \"weakness_identified\": \"The tool lookup_product_info returned 'Product PROD123 not found', preventing me from answering the user's question about this specific product.\"}, \"name\": \"draft_eval_case\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:16.448420Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_2200\", \"name\": \"draft_eval_case\", \"response\": {\"result\": \"Evaluation case drafted successfully based on weakness: The tool lookup_product_info returned 'Product PROD123 not found', preventing me from answering the user's question about this specific product.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-10T08:44:19.728294Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I couldn't find any information for product ID **PROD123**. Could you please double-check the product ID and try again? If you have any other questions or need assistance with a different product, feel free to let me know!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:19.730685Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I'm getting ERR001, what should I do?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm getting ERR001, what should I do?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I'm sorry, but I couldn't find any information or troubleshooting steps for error code ERR001 in our database. \n\nI have escalated your case to a human support agent (priority: medium) who will look into this issue and get back to you as soon as possible to help you resolve it.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I couldn't find any information or troubleshooting steps for error code ERR001 in our database. \\n\\nI have escalated your case to a human support agent (priority: medium) who will look into this issue and get back to you as soon as possible to help you resolve it.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent. Your role is to:\\n1. Answer product questions using the lookup_product_info tool.\\n2. Troubleshoot common issues using the check_known_issues tool.\\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\\n4. Politely refuse out-of-scope questions unrelated to the product.\\n\\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Looks up product information based on the product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Information about the product.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Checks for known issues associated with a specific error code.\\n\\nArgs:\\n    error_code: The error code to look up.\\n\\nReturns:\\n    Troubleshooting steps or known issue details.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalates a complex case to a human support agent.\\n\\nArgs:\\n    case_summary: A brief summary of the issue.\\n    priority: The priority level (low, medium, high, critical).\\n\\nReturns:\\n    Confirmation that the case has been escalated.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Drafts a new evaluation case when a weak response is identified.\\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\\n\\nArgs:\\n    weakness_identified: The weakness you identified in your response.\\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\\n    expected_response: The ideal response you should have given.\\n\\nReturns:\\n    Confirmation that the eval case was drafted.\", \"name\": \"draft_eval_case\", \"parameters_json_schema\": {\"properties\": {\"weakness_identified\": {\"title\": \"Weakness Identified\", \"type\": \"string\"}, \"proposed_eval_scenario\": {\"title\": \"Proposed Eval Scenario\", \"type\": \"string\"}, \"expected_response\": {\"title\": \"Expected Response\", \"type\": \"string\"}}, \"required\": [\"weakness_identified\", \"proposed_eval_scenario\", \"expected_response\"], \"title\": \"draft_eval_caseParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_8058\", \"args\": {\"error_code\": \"ERR001\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:14.902675Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_8058\", \"name\": \"check_known_issues\", \"response\": {\"result\": \"No known issues found for error code ERR001.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-10T08:44:16.245307Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_4171\", \"args\": {\"proposed_eval_scenario\": \"I'm getting ERR001, what should I do?\", \"weakness_identified\": \"The system does not have information on error code ERR001 in the check_known_issues tool, and I cannot resolve the customer's issue.\", \"expected_response\": \"I'm sorry, but I couldn't find any known issues or troubleshooting steps for error code ERR001 in our system. I will escalate this case to a human support agent to help you resolve this.\"}, \"name\": \"draft_eval_case\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:16.247681Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_4171\", \"name\": \"draft_eval_case\", \"response\": {\"result\": \"Evaluation case drafted successfully based on weakness: The system does not have information on error code ERR001 in the check_known_issues tool, and I cannot resolve the customer's issue.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-10T08:44:19.093065Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_7637\", \"args\": {\"priority\": \"medium\", \"case_summary\": \"Customer is experiencing error code ERR001, which is not found in the known issues database.\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:19.095351Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_7637\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Case escalated to human support. Priority: medium. Summary: Customer is experiencing error code ERR001, which is not found in the known issues database..\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-10T08:44:20.289259Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I couldn't find any information or troubleshooting steps for error code ERR001 in our database. \\n\\nI have escalated your case to a human support agent (priority: medium) who will look into this issue and get back to you as soon as possible to help you resolve it.\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:20.291471Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "My house is on fire and the thermostat is broken, I need human help immediately!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"My house is on fire and the thermostat is broken, I need human help immediately!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "Please get to safety immediately and call your local emergency services (such as 911) if you haven't already done so. Your physical safety is the absolute priority.\n\nI have escalated this issue to our human support team as a critical priority. Please focus on getting to safety.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Please get to safety immediately and call your local emergency services (such as 911) if you haven't already done so. Your physical safety is the absolute priority.\\n\\nI have escalated this issue to our human support team as a critical priority. Please focus on getting to safety.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent. Your role is to:\\n1. Answer product questions using the lookup_product_info tool.\\n2. Troubleshoot common issues using the check_known_issues tool.\\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\\n4. Politely refuse out-of-scope questions unrelated to the product.\\n\\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Looks up product information based on the product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Information about the product.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Checks for known issues associated with a specific error code.\\n\\nArgs:\\n    error_code: The error code to look up.\\n\\nReturns:\\n    Troubleshooting steps or known issue details.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalates a complex case to a human support agent.\\n\\nArgs:\\n    case_summary: A brief summary of the issue.\\n    priority: The priority level (low, medium, high, critical).\\n\\nReturns:\\n    Confirmation that the case has been escalated.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Drafts a new evaluation case when a weak response is identified.\\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\\n\\nArgs:\\n    weakness_identified: The weakness you identified in your response.\\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\\n    expected_response: The ideal response you should have given.\\n\\nReturns:\\n    Confirmation that the eval case was drafted.\", \"name\": \"draft_eval_case\", \"parameters_json_schema\": {\"properties\": {\"weakness_identified\": {\"title\": \"Weakness Identified\", \"type\": \"string\"}, \"proposed_eval_scenario\": {\"title\": \"Proposed Eval Scenario\", \"type\": \"string\"}, \"expected_response\": {\"title\": \"Expected Response\", \"type\": \"string\"}}, \"required\": [\"weakness_identified\", \"proposed_eval_scenario\", \"expected_response\"], \"title\": \"draft_eval_caseParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_9257\", \"args\": {\"case_summary\": \"Customer reports their house is on fire and their thermostat is broken, requesting immediate human assistance.\", \"priority\": \"critical\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:14.827286Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_9257\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Case escalated to human support. Priority: critical. Summary: Customer reports their house is on fire and their thermostat is broken, requesting immediate human assistance..\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-10T08:44:17.279155Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"Please get to safety immediately and call your local emergency services (such as 911) if you haven't already done so. Your physical safety is the absolute priority.\\n\\nI have escalated this issue to our human support team as a critical priority. Please focus on getting to safety.\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:17.281399Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "What is the capital of France?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"What is the capital of France?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I cannot answer general knowledge questions like this one. If you have any questions about our products or need technical support, please let me know!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I cannot answer general knowledge questions like this one. If you have any questions about our products or need technical support, please let me know!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent. Your role is to:\\n1. Answer product questions using the lookup_product_info tool.\\n2. Troubleshoot common issues using the check_known_issues tool.\\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\\n4. Politely refuse out-of-scope questions unrelated to the product.\\n\\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Looks up product information based on the product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Information about the product.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Checks for known issues associated with a specific error code.\\n\\nArgs:\\n    error_code: The error code to look up.\\n\\nReturns:\\n    Troubleshooting steps or known issue details.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalates a complex case to a human support agent.\\n\\nArgs:\\n    case_summary: A brief summary of the issue.\\n    priority: The priority level (low, medium, high, critical).\\n\\nReturns:\\n    Confirmation that the case has been escalated.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Drafts a new evaluation case when a weak response is identified.\\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\\n\\nArgs:\\n    weakness_identified: The weakness you identified in your response.\\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\\n    expected_response: The ideal response you should have given.\\n\\nReturns:\\n    Confirmation that the eval case was drafted.\", \"name\": \"draft_eval_case\", \"parameters_json_schema\": {\"properties\": {\"weakness_identified\": {\"title\": \"Weakness Identified\", \"type\": \"string\"}, \"proposed_eval_scenario\": {\"title\": \"Proposed Eval Scenario\", \"type\": \"string\"}, \"expected_response\": {\"title\": \"Expected Response\", \"type\": \"string\"}}, \"required\": [\"weakness_identified\", \"proposed_eval_scenario\", \"expected_response\"], \"title\": \"draft_eval_caseParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I cannot answer general knowledge questions like this one. If you have any questions about our products or need technical support, please let me know!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:14.905097Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "Your product sucks.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Your product sucks.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "",
+        "reference_raw_json": "",
+        "response_display_text": "I'm really sorry to hear that you're having a frustrating experience. I would love to help make things right. \n\nCould you please share which product you are using and the specific issues you've encountered? With that information, I can look up details or check for troubleshooting steps to help resolve the problem for you.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm really sorry to hear that you're having a frustrating experience. I would love to help make things right. \\n\\nCould you please share which product you are using and the specific issues you've encountered? With that information, I can look up details or check for troubleshooting steps to help resolve the problem for you.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a customer support agent. Your role is to:\\n1. Answer product questions using the lookup_product_info tool.\\n2. Troubleshoot common issues using the check_known_issues tool.\\n3. Escalate complex cases to a human using the escalate_to_human tool (priority levels: low, medium, high, critical).\\n4. Politely refuse out-of-scope questions unrelated to the product.\\n\\nAdditionally, you have a self-evaluation feedback loop. If you provide a weak response, or cannot answer a user's question, call the `draft_eval_case` tool to draft a new evaluation scenario to improve future responses.\", \"tools\": [{\"function_declarations\": [{\"description\": \"Looks up product information based on the product ID.\\n\\nArgs:\\n    product_id: The ID of the product.\\n\\nReturns:\\n    Information about the product.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Checks for known issues associated with a specific error code.\\n\\nArgs:\\n    error_code: The error code to look up.\\n\\nReturns:\\n    Troubleshooting steps or known issue details.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalates a complex case to a human support agent.\\n\\nArgs:\\n    case_summary: A brief summary of the issue.\\n    priority: The priority level (low, medium, high, critical).\\n\\nReturns:\\n    Confirmation that the case has been escalated.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Drafts a new evaluation case when a weak response is identified.\\nCall this tool when you detect you are providing a weak response or are unable to fully solve a problem.\\n\\nArgs:\\n    weakness_identified: The weakness you identified in your response.\\n    proposed_eval_scenario: A proposed user prompt to test this scenario.\\n    expected_response: The ideal response you should have given.\\n\\nReturns:\\n    Confirmation that the eval case was drafted.\", \"name\": \"draft_eval_case\", \"parameters_json_schema\": {\"properties\": {\"weakness_identified\": {\"title\": \"Weakness Identified\", \"type\": \"string\"}, \"proposed_eval_scenario\": {\"title\": \"Proposed Eval Scenario\", \"type\": \"string\"}, \"expected_response\": {\"title\": \"Expected Response\", \"type\": \"string\"}}, \"required\": [\"weakness_identified\", \"proposed_eval_scenario\", \"expected_response\"], \"title\": \"draft_eval_caseParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm really sorry to hear that you're having a frustrating experience. I would love to help make things right. \\n\\nCould you please share which product you are using and the specific issues you've encountered? With that information, I can look up details or check for troubleshooting steps to help resolve the problem for you.\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-10T08:44:14.906862Z\"}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}

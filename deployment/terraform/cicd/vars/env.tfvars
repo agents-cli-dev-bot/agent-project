@@ -1,0 +1,11 @@
+staging_project_id = "agents-cli-test-cicd-u75kiv"
+prod_project_id = "agents-cli-test-cicd-u75kiv"
+cicd_runner_project_id = "agents-cli-test-cicd-u75kiv"
+region = "us-east1"
+repository_name = "agent-project"
+repository_owner = "agents-cli-dev-bot"
+host_connection_name = "git-agent-project"
+create_cb_connection = false
+create_repository = false
+github_app_installation_id = "119552500"
+github_pat_secret_id = "github-pat"
