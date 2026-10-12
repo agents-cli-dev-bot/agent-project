@@ -36,8 +36,8 @@ steps:
           --update-env-vars="OTEL_RESOURCE_ATTRIBUTES=service.version=${COMMIT_SHA},LOGS_BUCKET_NAME=${_LOGS_BUCKET_NAME_PROD}"
 
 substitutions:
-  _PROD_PROJECT_ID: YOUR_PROD_PROJECT_ID
-  _REGION: us-east1
+  _PROD_PROJECT_ID: agents-cli-test-cicd-u75kiv
+  _REGION: us-central1
 
 logsBucket: gs://${PROJECT_ID}-agent-project-logs/build-logs
 options:
