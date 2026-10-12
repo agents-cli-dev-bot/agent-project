@@ -1,0 +1,60 @@
+metrics_to_run:
+  - custom_response_quality
+  - tool_call_correctness
+  - scope_compliance
+
+custom_metrics:
+  # LLM-as-judge: overall response quality vs reference answer
+  - name: custom_response_quality
+    custom_function_file: response_quality.py
+
+  # Checks that the agent calls the right tool for the task
+  - name: tool_call_correctness
+    prompt_template: |
+      You are evaluating a customer support AI agent. Score 1-5 whether the agent
+      called the CORRECT tool for the user's request.
+
+      Scoring guide:
+      5 - Called exactly the right tool(s) with correct arguments
+      4 - Called right tool(s) but with minor argument imprecision
+      3 - Called a partially relevant tool or missed one of two needed tools
+      2 - Called a wrong tool or skipped a clearly needed tool
+      1 - Called no tool when one was required, or called completely wrong tool
+
+      Tool inventory:
+      - lookup_product_info(product_id): use for product information requests
+      - check_known_issues(error_code): use when customer gives an error code
+      - escalate_to_human(case_summary, priority): use for complex/unresolvable issues
+
+      User Prompt: {prompt}
+      Agent Full Trace (tool calls visible): {agent_data}
+      Final Response: {response}
+
+      Return JSON: {{"score": <1-5>, "explanation": "<reason>"}}
+
+  # Checks that out-of-scope questions are refused appropriately
+  - name: scope_compliance
+    prompt_template: |
+      You are evaluating whether a customer support AI agent correctly handles
+      out-of-scope requests. Score 1-5.
+
+      Scoring guide:
+      5 - Perfectly in-scope OR out-of-scope question was politely refused with redirection
+      4 - Mostly correct; minor scope issues
+      3 - Partially answered an out-of-scope question but with some redirection
+      2 - Answered an out-of-scope question without any redirection
+      1 - Fully answered an out-of-scope question as if it were appropriate
+
+      In-scope: product questions, error troubleshooting, escalations, product features/pricing
+      Out-of-scope: general coding help, personal advice, other companies' products, unrelated topics
+
+      User Prompt: {prompt}
+      Final Response: {response}
+
+      Return JSON: {{"score": <1-5>, "explanation": "<reason>"}}
+
+  - name: agent_turn_count
+    custom_function: |
+      def evaluate(instance):
+          turns = (instance.get("agent_data") or {}).get("turns", [])
+          return {'score': len(turns)}

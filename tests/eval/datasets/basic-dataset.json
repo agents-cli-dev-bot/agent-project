@@ -1,0 +1,95 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_cloudsync",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about your CloudSync Pro product? The product ID is PRD-001."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "CloudSync Pro (PRD-001) is an enterprise-grade cloud storage product with real-time sync, end-to-end encryption, and unlimited storage, priced at $29.99/month."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm seeing error code ERR-1001 on my Windows machine. What does this mean?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "ERR-1001 is a known sync failure on Windows 11 after the 23H2 update. The resolution is to update CloudSync Pro client to v4.2.1 or later."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_high_priority",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've lost all my backup data after running a restore operation on DataVault. My whole team is blocked. I've already tried restarting the service. This is extremely urgent!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "This is a serious data loss situation that should be escalated to a human agent with high or critical priority. A ticket should be created with an expected response time of within 30 minutes or 4 hours."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you help me debug my Python code? I have a list comprehension that's not working."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "The agent should politely decline to help with general programming questions and redirect the customer to product-related support."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "response_tone_empathy",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm really frustrated. Your VPN keeps disconnecting every few minutes and I have an important client call in an hour. Error code ERR-1003."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "The agent should acknowledge the customer's frustration, provide the resolution for ERR-1003 (install beta client v3.9.0-beta), and offer further help in a professional and empathetic tone."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "product_lookup_unknown",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I want information about product PRD-999."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "The agent should inform the customer that PRD-999 is not found and list the available product IDs."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_explicit_human_request",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I just want to talk to a real person. My issue with CloudSync has been going on for two weeks and nothing is working."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "The agent should acknowledge the customer's request, empathize with the long-running issue, and escalate to a human agent with at least medium priority, creating a ticket with a clear summary."}]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2753 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It accurately extracts all the key features, pricing, and support tier information from the tool output, matching the expected answer's core details. It also includes additional relevant information like 'real-time collaboration features' and 'Business level support' which were present in the tool output. The response is clear, well-structured, and relevant to the user's prompt. The only minor difference is the omission of the product ID 'PRD-001' in the final response, which was in the prompt and the expected answer, but this does not detract from the accuracy or completeness of the product description itself.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user explicitly asked for information about a product and provided a product ID. The agent correctly identified and called the `lookup_product_info` tool with the exact `product_id` provided by the user. This is a perfect use of the available tools.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user asked a question about a specific product, 'CloudSync Pro', which is a product question and therefore in-scope. The AI perfectly answered the question by providing details about the product's features and pricing, and then offered further assistance. This is a perfect handling of an in-scope request.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It accurately identifies the error, explains its nature (sync failure on Windows 11 with CloudSync Pro), states that it's resolved, and provides the correct resolution (update to v4.2.1 or later, downloadable from the account dashboard). The response is clear, concise, and directly addresses the user's prompt. It aligns perfectly with the expected answer, providing all necessary information and even adding the helpful detail about where to download the update, which was present in the tool output.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user explicitly provided an error code ('ERR-1001') and asked what it meant. The agent correctly identified the need to check for known issues and called the `check_known_issues` tool with the exact error code provided as the argument. This is a perfect match of tool and arguments to the user's request.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user's prompt is a classic error troubleshooting question, which is explicitly in-scope. The AI agent correctly identified the error, provided context related to the product (CloudSync Pro), and offered a clear solution (update the client). This is a perfect handling of an in-scope request.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It accurately identifies the critical nature of the issue (data loss), escalates it to a human agent, provides a ticket ID, and gives a clear expected response time (within 30 minutes), which aligns perfectly with the expected answer's guidance for a serious data loss situation. The response is clear, relevant, and provides immediate actionable information to the user.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user reported data loss and a team blockage, explicitly stating it was 'extremely urgent'. The agent correctly identified this as a critical issue, escalated it to a human, and assigned the 'critical' priority, directly following the escalation guidelines for data loss or critical outages. The `case_summary` accurately reflects the user's input.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user's prompt describes a critical data loss issue directly related to the product ('DataVault'), which falls under 'error troubleshooting' and 'product questions' and is thus clearly in-scope. The AI agent correctly recognized the urgency and severity of the situation and responded by escalating the case to a human agent, providing a ticket ID, and setting a clear expectation for contact time. Escalation is an explicitly in-scope action. This is a perfect handling of an in-scope request that likely requires human intervention.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent correctly identified that the user's request was out of scope, politely declined to help with general Python debugging, and successfully redirected the user to product-related support. This perfectly aligns with the expected answer and the agent's instructions regarding out-of-scope topics.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user's prompt, 'Can you help me debug my Python code? I have a list comprehension that's not working,' is a request for general coding assistance, not related to the agent's specific product support role. The agent's instructions clearly state under 'Out-of-scope topics': 'If a customer asks about anything unrelated to our products (e.g., general coding help, personal advice, other companies' products), politely decline and refocus on product support.' The agent correctly identified that no available tool was applicable for this out-of-scope request and therefore made the correct decision by not calling any tool and instead providing an appropriate out-of-scope response.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user's prompt was clearly out-of-scope as it requested general coding help. The AI agent politely refused the request, explicitly stating its limitations ('I can only provide support for our products. I cannot help with general Python debugging.'), and then offered a clear redirection back to in-scope topics ('Is there anything else I can help you with regarding our software?'). This perfectly aligns with the criteria for a score of 5.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 4,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's final response is excellent. It accurately identifies the known issue based on the provided error code, offers a clear and actionable resolution (installing the beta client), and provides additional context (stable fix version). The tone is professional and empathetic, directly addressing the user's immediate need for a stable connection for their client call. It also proactively offers further assistance, aligning perfectly with the expected answer's requirements for acknowledging frustration, providing a resolution, and offering help in a professional and empathetic tone.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user reported an issue with an error code. The agent correctly identified the need to use the `check_known_issues` tool and passed the provided `ERR-1003` as the `error_code` argument, which is exactly what the tool is designed for. The tool call was perfectly aligned with the user's prompt and the agent's instructions.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user's prompt is a classic in-scope request: an error troubleshooting issue related to the company's product (VPN keeps disconnecting, error code provided). The AI agent perfectly addresses the issue by identifying it, providing a solution (beta fix with version numbers), and offering further assistance. This is an excellent handling of an in-scope request.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 5,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It accurately informs the user that the requested product ID (PRD-999) was not found and correctly lists the available product IDs, which perfectly matches the expected answer. The response is clear, polite, and offers further assistance, adhering to good customer service practices.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user requested information about product 'PRD-999'. The agent correctly identified the need to use the `lookup_product_info` tool and called it with the exact `product_id` 'PRD-999' as provided by the user. This is a perfect match between the user's intent and the tool call.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user's request for product information (PRD-999) is perfectly in-scope ('product questions'). The AI agent handled the request well by explaining it couldn't find information for the specific product ID, listing available product IDs, and offering further assistance. This is a perfect handling of an in-scope request, even if the specific data wasn't available.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 6,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's final response is excellent. It clearly confirms that a human support agent will contact the user, provides the escalation ticket ID, and states the expected contact time. This directly addresses the user's request to speak to a real person. Although the explicit empathy was in the agent's preceding message (before the tool call), the overall interaction successfully acknowledged the user's frustration and escalated the issue with a 'high' priority (as seen in the trace), which meets the 'at least medium priority' requirement of the expected answer. The response is accurate, relevant, and clear, and concludes by offering further assistance.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "tool_call_correctness": {
+              "metric_name": "tool_call_correctness",
+              "score": 5.0,
+              "explanation": "The user explicitly stated, 'I just want to talk to a real person.' The agent correctly identified and called the `escalate_to_human` tool, which is specifically designed for such requests according to its description and the agent's instructions. The `case_summary` accurately reflects the user's situation and explicit request, and the 'high' priority is appropriate for an issue ongoing for two weeks where 'nothing is working' and the customer is clearly frustrated enough to ask for a human.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "scope_compliance": {
+              "metric_name": "scope_compliance",
+              "score": 5.0,
+              "explanation": "The user's prompt indicates an ongoing issue with 'CloudSync' and a desire to speak to a real person, which falls under 'error troubleshooting' and 'escalations' \u2013 both explicitly in-scope topics. The AI agent correctly identifies this as an in-scope request and handles it perfectly by initiating an escalation, providing a ticket ID, and setting expectations for human contact. It also politely offers further assistance while the user waits.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "custom_response_quality",
+      "num_cases_total": 7,
+      "num_cases_valid": 7,
+      "num_cases_error": 0,
+      "mean_score": 5.0,
+      "stdev_score": 0.0,
+      "pass_rate": null
+    },
+    {
+      "metric_name": "tool_call_correctness",
+      "num_cases_total": 7,
+      "num_cases_valid": 7,
+      "num_cases_error": 0,
+      "mean_score": 5.0,
+      "stdev_score": 0.0,
+      "pass_rate": null
+    },
+    {
+      "metric_name": "scope_compliance",
+      "num_cases_total": 7,
+      "num_cases_valid": 7,
+      "num_cases_error": 0,
+      "mean_score": 5.0,
+      "stdev_score": 0.0,
+      "pass_rate": null
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you tell me about your CloudSync Pro product? The product ID is PRD-001.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "CloudSync Pro is an enterprise-grade cloud storage solution that offers real-time syncing across all your devices. It boasts unlimited storage, end-to-end encryption for your data, and real-time collaboration features. The price is $29.99 per month, and it comes with Business level support.\n\nIs there anything else I can help you with regarding CloudSync Pro?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "CloudSync Pro (PRD-001) is an enterprise-grade cloud storage product with real-time sync, end-to-end encryption, and unlimited storage, priced at $29.99/month.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup_cloudsync",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-0b4cba01-de5c-427b-b286-ed4cf646ce66",
+                            "args": {
+                              "product_id": "PRD-001"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.982331Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-0b4cba01-de5c-427b-b286-ed4cf646ce66",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "Product: CloudSync Pro\nCategory: Cloud Storage\nDescription: Enterprise-grade cloud storage with real-time sync across devices.\nKey Features:\n  - Unlimited storage\n  - End-to-end encryption\n  - Real-time collaboration\nPrice: $29.99/month\nSupport Tier: Business"
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-12T09:30:10.211475Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "CloudSync Pro is an enterprise-grade cloud storage solution that offers real-time syncing across all your devices. It boasts unlimited storage, end-to-end encryption for your data, and real-time collaboration features. The price is $29.99 per month, and it comes with Business level support.\n\nIs there anything else I can help you with regarding CloudSync Pro?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:10.213846Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'm seeing error code ERR-1001 on my Windows machine. What does this mean?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "It looks like you're encountering a known issue related to sync failure on Windows 11 with CloudSync Pro. This issue has been resolved.\n\nTo fix this, please update your CloudSync Pro client to version 4.2.1 or later. You can download the update from your account dashboard.\n\nIs there anything else I can help you with today?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "ERR-1001 is a known sync failure on Windows 11 after the 23H2 update. The resolution is to update CloudSync Pro client to v4.2.1 or later.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "known_issue_lookup",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-ab7f499d-b1d4-46d9-9709-7a8088dde499",
+                            "args": {
+                              "error_code": "ERR-1001"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.901516Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-ab7f499d-b1d4-46d9-9709-7a8088dde499",
+                            "name": "check_known_issues",
+                            "response": {
+                              "result": "Known Issue: Sync failure on Windows 11\nStatus: Resolved\nDescription: CloudSync Pro may fail to sync on Windows 11 after the 23H2 update.\nResolution: Update CloudSync Pro client to v4.2.1 or later. Download from your account dashboard.\nAffected Products: PRD-001"
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-12T09:30:09.949172Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "It looks like you're encountering a known issue related to sync failure on Windows 11 with CloudSync Pro. This issue has been resolved.\n\nTo fix this, please update your CloudSync Pro client to version 4.2.1 or later. You can download the update from your account dashboard.\n\nIs there anything else I can help you with today?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:09.951927Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I've lost all my backup data after running a restore operation on DataVault. My whole team is blocked. I've already tried restarting the service. This is extremely urgent!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I've escalated your case. The ticket ID is TKT-10001, and a human support agent will contact you within 30 minutes.\n\nIs there anything else I can assist you with at this moment?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "This is a serious data loss situation that should be escalated to a human agent with high or critical priority. A ticket should be created with an expected response time of within 30 minutes or 4 hours.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "escalation_high_priority",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I understand this is a critical situation and you've lost your backup data on DataVault. I'm very sorry to hear this has blocked your entire team.\n\nThis sounds like a severe issue that requires immediate human intervention. I will escalate this case with critical priority right away.\n\n",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-a818e2cc-db08-4580-9d97-d9db060990a1",
+                            "args": {
+                              "priority": "critical",
+                              "case_summary": "Customer lost all backup data on DataVault after a restore operation. Team is blocked. User has already tried restarting the service. This is a critical data loss incident."
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.975316Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-a818e2cc-db08-4580-9d97-d9db060990a1",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Escalation ticket created: TKT-10001\nPriority: CRITICAL\nExpected response: within 30 minutes\nA human support agent will contact you within 30 minutes. Please keep your ticket ID (TKT-10001) for reference."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-12T09:30:10.932818Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I've escalated your case. The ticket ID is TKT-10001, and a human support agent will contact you within 30 minutes.\n\nIs there anything else I can assist you with at this moment?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:10.934994Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you help me debug my Python code? I have a list comprehension that's not working.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I apologize, but I can only provide support for our products. I cannot help with general Python debugging. Is there anything else I can help you with regarding our software?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The agent should politely decline to help with general programming questions and redirect the customer to product-related support.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "out_of_scope_refusal",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I apologize, but I can only provide support for our products. I cannot help with general Python debugging. Is there anything else I can help you with regarding our software?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.980205Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I'm really frustrated. Your VPN keeps disconnecting every few minutes and I have an important client call in an hour. Error code ERR-1003.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Thank you for providing that error code. It looks like you're encountering a known issue where the VPN connection intermittently drops on macOS Sonoma (14.x).\n\nWe have a beta fix available that should resolve this for you. Please install the latest beta client (v3.9.0-beta) from our support portal. A stable fix is expected to be released in version 3.9.1.\n\nCould you please try installing the beta client? We believe this will resolve the disconnection issue so you can have a stable connection for your client call. Please let me know if you need any assistance finding the support portal or installing the client.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The agent should acknowledge the customer's frustration, provide the resolution for ERR-1003 (install beta client v3.9.0-beta), and offer further help in a professional and empathetic tone.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "response_tone_empathy",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm very sorry to hear that our VPN is disconnecting so frequently, especially with an important client call coming up. That sounds incredibly frustrating.\n\nLet me check our known issues for error code ERR-1003 right away to see if we have a solution for you.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-dc900851-e2af-4272-bd31-2ceac4098b98",
+                            "args": {
+                              "error_code": "ERR-1003"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.965154Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-dc900851-e2af-4272-bd31-2ceac4098b98",
+                            "name": "check_known_issues",
+                            "response": {
+                              "result": "Known Issue: VPN connection drops on macOS Sonoma\nStatus: Beta fix available\nDescription: SecureConnect VPN intermittently drops on macOS Sonoma (14.x).\nResolution: Install the latest beta client (v3.9.0-beta) from the support portal. Stable fix expected in v3.9.1.\nAffected Products: PRD-003"
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-12T09:30:10.349326Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Thank you for providing that error code. It looks like you're encountering a known issue where the VPN connection intermittently drops on macOS Sonoma (14.x).\n\nWe have a beta fix available that should resolve this for you. Please install the latest beta client (v3.9.0-beta) from our support portal. A stable fix is expected to be released in version 3.9.1.\n\nCould you please try installing the beta client? We believe this will resolve the disconnection issue so you can have a stable connection for your client call. Please let me know if you need any assistance finding the support portal or installing the client.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:10.351755Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I want information about product PRD-999.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I couldn't find any information for product ID PRD-999. We currently have information for products PRD-001, PRD-002, PRD-003, and PRD-004.\n\nIs there another product ID you'd like to search for, or perhaps I can help with something else?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The agent should inform the customer that PRD-999 is not found and list the available product IDs.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup_unknown",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-aecf5b80-bfb9-4a19-991b-c5367332d2aa",
+                            "args": {
+                              "product_id": "PRD-999"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.985970Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-aecf5b80-bfb9-4a19-991b-c5367332d2aa",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "Product 'PRD-999' not found. Available products: PRD-001, PRD-002, PRD-003, PRD-004"
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-12T09:30:10.091552Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I couldn't find any information for product ID PRD-999. We currently have information for products PRD-001, PRD-002, PRD-003, and PRD-004.\n\nIs there another product ID you'd like to search for, or perhaps I can help with something else?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:10.093713Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I just want to talk to a real person. My issue with CloudSync has been going on for two weeks and nothing is working.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "A human support agent will contact you within 4 hours. Your escalation ticket ID is TKT-10002. Please keep this for your reference.\n\nIs there anything else I can assist you with today while you wait?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The agent should acknowledge the customer's request, empathize with the long-running issue, and escalate to a human agent with at least medium priority, creating a ticket with a clear summary.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "escalation_explicit_human_request",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly and professional customer support agent for our software products.\n\nYour responsibilities:\n1. Answer questions about our products using the lookup_product_info tool.\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\n3. Escalate complex cases to human agents using the escalate_to_human tool.\n\nEscalation guidelines \u2014 escalate when:\n- The issue cannot be resolved with available information.\n- The customer reports data loss or a critical outage.\n- The customer explicitly asks to speak with a human.\n- The same issue persists after applying the documented resolution.\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\n  high (significant business impact), critical (data loss or full outage).\n\nOut-of-scope topics:\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\n  personal advice, other companies' products), politely decline and refocus on product support.\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\n  to our products, or topics completely outside of software support.\n\nTone guidelines:\n- Always be polite, empathetic, and professional.\n- Acknowledge the customer's frustration when they report problems.\n- Be concise but thorough \u2014 avoid unnecessary jargon.\n- Use first-person plural (\"we\") to represent the company.\n- End interactions by asking if there is anything else you can help with.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up detailed information about a product by its product ID.\n\nArgs:\n    product_id: The product identifier (e.g., 'PRD-001').\n\nReturns:\n    A string with the product details, or an error message if not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check whether a given error code matches a known issue in the support database.\n\nArgs:\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\n\nReturns:\n    A string with the known issue details and resolution steps, or a message\n    indicating no match was found.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a customer case to a human support agent.\n\nUse this when the issue is too complex to resolve automatically, requires\naccount-level access, involves potential data loss, or when the customer\nexplicitly requests human assistance.\n\nArgs:\n    case_summary: A concise description of the customer's issue, steps\n        already taken, and any relevant context.\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\n        Use 'critical' only for active outages or data loss scenarios.\n\nReturns:\n    A confirmation string with the escalation ticket ID and expected\n    response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "enum": [
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ],
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I understand your frustration. I'm very sorry to hear that your CloudSync issue has been ongoing for two weeks. I'm escalating your case to a human agent right away so they can provide more in-depth assistance.\n\n",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-a0abc29f-da3a-45c2-91ca-fe7e448df7d9",
+                            "args": {
+                              "case_summary": "Customer reports a persistent issue with CloudSync for two weeks, stating \"nothing is working\" and explicitly requested to speak with a human agent.",
+                              "priority": "high"
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:08.984231Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-a0abc29f-da3a-45c2-91ca-fe7e448df7d9",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Escalation ticket created: TKT-10002\nPriority: HIGH\nExpected response: within 4 hours\nA human support agent will contact you within 4 hours. Please keep your ticket ID (TKT-10002) for reference."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-12T09:30:11.148010Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "A human support agent will contact you within 4 hours. Your escalation ticket ID is TKT-10002. Please keep this for your reference.\n\nIs there anything else I can assist you with today while you wait?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-12T09:30:11.149939Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-10-12T09:30:40.454918Z",
+    "dataset": [
+      {
+        "prompt_display_text": "Can you tell me about your CloudSync Pro product? The product ID is PRD-001.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you tell me about your CloudSync Pro product? The product ID is PRD-001.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "CloudSync Pro (PRD-001) is an enterprise-grade cloud storage product with real-time sync, end-to-end encryption, and unlimited storage, priced at $29.99/month.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"CloudSync Pro (PRD-001) is an enterprise-grade cloud storage product with real-time sync, end-to-end encryption, and unlimited storage, priced at $29.99/month.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "CloudSync Pro is an enterprise-grade cloud storage solution that offers real-time syncing across all your devices. It boasts unlimited storage, end-to-end encryption for your data, and real-time collaboration features. The price is $29.99 per month, and it comes with Business level support.\n\nIs there anything else I can help you with regarding CloudSync Pro?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"CloudSync Pro is an enterprise-grade cloud storage solution that offers real-time syncing across all your devices. It boasts unlimited storage, end-to-end encryption for your data, and real-time collaboration features. The price is $29.99 per month, and it comes with Business level support.\\n\\nIs there anything else I can help you with regarding CloudSync Pro?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"adk-0b4cba01-de5c-427b-b286-ed4cf646ce66\", \"args\": {\"product_id\": \"PRD-001\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.982331Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-0b4cba01-de5c-427b-b286-ed4cf646ce66\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"Product: CloudSync Pro\\nCategory: Cloud Storage\\nDescription: Enterprise-grade cloud storage with real-time sync across devices.\\nKey Features:\\n  - Unlimited storage\\n  - End-to-end encryption\\n  - Real-time collaboration\\nPrice: $29.99/month\\nSupport Tier: Business\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-12T09:30:10.211475Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"CloudSync Pro is an enterprise-grade cloud storage solution that offers real-time syncing across all your devices. It boasts unlimited storage, end-to-end encryption for your data, and real-time collaboration features. The price is $29.99 per month, and it comes with Business level support.\\n\\nIs there anything else I can help you with regarding CloudSync Pro?\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:10.213846Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I'm seeing error code ERR-1001 on my Windows machine. What does this mean?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm seeing error code ERR-1001 on my Windows machine. What does this mean?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "ERR-1001 is a known sync failure on Windows 11 after the 23H2 update. The resolution is to update CloudSync Pro client to v4.2.1 or later.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"ERR-1001 is a known sync failure on Windows 11 after the 23H2 update. The resolution is to update CloudSync Pro client to v4.2.1 or later.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "It looks like you're encountering a known issue related to sync failure on Windows 11 with CloudSync Pro. This issue has been resolved.\n\nTo fix this, please update your CloudSync Pro client to version 4.2.1 or later. You can download the update from your account dashboard.\n\nIs there anything else I can help you with today?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"It looks like you're encountering a known issue related to sync failure on Windows 11 with CloudSync Pro. This issue has been resolved.\\n\\nTo fix this, please update your CloudSync Pro client to version 4.2.1 or later. You can download the update from your account dashboard.\\n\\nIs there anything else I can help you with today?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"adk-ab7f499d-b1d4-46d9-9709-7a8088dde499\", \"args\": {\"error_code\": \"ERR-1001\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.901516Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-ab7f499d-b1d4-46d9-9709-7a8088dde499\", \"name\": \"check_known_issues\", \"response\": {\"result\": \"Known Issue: Sync failure on Windows 11\\nStatus: Resolved\\nDescription: CloudSync Pro may fail to sync on Windows 11 after the 23H2 update.\\nResolution: Update CloudSync Pro client to v4.2.1 or later. Download from your account dashboard.\\nAffected Products: PRD-001\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-12T09:30:09.949172Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"It looks like you're encountering a known issue related to sync failure on Windows 11 with CloudSync Pro. This issue has been resolved.\\n\\nTo fix this, please update your CloudSync Pro client to version 4.2.1 or later. You can download the update from your account dashboard.\\n\\nIs there anything else I can help you with today?\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:09.951927Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I've lost all my backup data after running a restore operation on DataVault. My whole team is blocked. I've already tried restarting the service. This is extremely urgent!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I've lost all my backup data after running a restore operation on DataVault. My whole team is blocked. I've already tried restarting the service. This is extremely urgent!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "This is a serious data loss situation that should be escalated to a human agent with high or critical priority. A ticket should be created with an expected response time of within 30 minutes or 4 hours.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"This is a serious data loss situation that should be escalated to a human agent with high or critical priority. A ticket should be created with an expected response time of within 30 minutes or 4 hours.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I've escalated your case. The ticket ID is TKT-10001, and a human support agent will contact you within 30 minutes.\n\nIs there anything else I can assist you with at this moment?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I've escalated your case. The ticket ID is TKT-10001, and a human support agent will contact you within 30 minutes.\\n\\nIs there anything else I can assist you with at this moment?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I understand this is a critical situation and you've lost your backup data on DataVault. I'm very sorry to hear this has blocked your entire team.\\n\\nThis sounds like a severe issue that requires immediate human intervention. I will escalate this case with critical priority right away.\\n\\n\"}, {\"function_call\": {\"id\": \"adk-a818e2cc-db08-4580-9d97-d9db060990a1\", \"args\": {\"priority\": \"critical\", \"case_summary\": \"Customer lost all backup data on DataVault after a restore operation. Team is blocked. User has already tried restarting the service. This is a critical data loss incident.\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.975316Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-a818e2cc-db08-4580-9d97-d9db060990a1\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Escalation ticket created: TKT-10001\\nPriority: CRITICAL\\nExpected response: within 30 minutes\\nA human support agent will contact you within 30 minutes. Please keep your ticket ID (TKT-10001) for reference.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-12T09:30:10.932818Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I've escalated your case. The ticket ID is TKT-10001, and a human support agent will contact you within 30 minutes.\\n\\nIs there anything else I can assist you with at this moment?\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:10.934994Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "Can you help me debug my Python code? I have a list comprehension that's not working.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you help me debug my Python code? I have a list comprehension that's not working.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "The agent should politely decline to help with general programming questions and redirect the customer to product-related support.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"The agent should politely decline to help with general programming questions and redirect the customer to product-related support.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I apologize, but I can only provide support for our products. I cannot help with general Python debugging. Is there anything else I can help you with regarding our software?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I apologize, but I can only provide support for our products. I cannot help with general Python debugging. Is there anything else I can help you with regarding our software?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I apologize, but I can only provide support for our products. I cannot help with general Python debugging. Is there anything else I can help you with regarding our software?\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.980205Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I'm really frustrated. Your VPN keeps disconnecting every few minutes and I have an important client call in an hour. Error code ERR-1003.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm really frustrated. Your VPN keeps disconnecting every few minutes and I have an important client call in an hour. Error code ERR-1003.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "The agent should acknowledge the customer's frustration, provide the resolution for ERR-1003 (install beta client v3.9.0-beta), and offer further help in a professional and empathetic tone.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"The agent should acknowledge the customer's frustration, provide the resolution for ERR-1003 (install beta client v3.9.0-beta), and offer further help in a professional and empathetic tone.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "Thank you for providing that error code. It looks like you're encountering a known issue where the VPN connection intermittently drops on macOS Sonoma (14.x).\n\nWe have a beta fix available that should resolve this for you. Please install the latest beta client (v3.9.0-beta) from our support portal. A stable fix is expected to be released in version 3.9.1.\n\nCould you please try installing the beta client? We believe this will resolve the disconnection issue so you can have a stable connection for your client call. Please let me know if you need any assistance finding the support portal or installing the client.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Thank you for providing that error code. It looks like you're encountering a known issue where the VPN connection intermittently drops on macOS Sonoma (14.x).\\n\\nWe have a beta fix available that should resolve this for you. Please install the latest beta client (v3.9.0-beta) from our support portal. A stable fix is expected to be released in version 3.9.1.\\n\\nCould you please try installing the beta client? We believe this will resolve the disconnection issue so you can have a stable connection for your client call. Please let me know if you need any assistance finding the support portal or installing the client.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm very sorry to hear that our VPN is disconnecting so frequently, especially with an important client call coming up. That sounds incredibly frustrating.\\n\\nLet me check our known issues for error code ERR-1003 right away to see if we have a solution for you.\"}, {\"function_call\": {\"id\": \"adk-dc900851-e2af-4272-bd31-2ceac4098b98\", \"args\": {\"error_code\": \"ERR-1003\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.965154Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-dc900851-e2af-4272-bd31-2ceac4098b98\", \"name\": \"check_known_issues\", \"response\": {\"result\": \"Known Issue: VPN connection drops on macOS Sonoma\\nStatus: Beta fix available\\nDescription: SecureConnect VPN intermittently drops on macOS Sonoma (14.x).\\nResolution: Install the latest beta client (v3.9.0-beta) from the support portal. Stable fix expected in v3.9.1.\\nAffected Products: PRD-003\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-12T09:30:10.349326Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"Thank you for providing that error code. It looks like you're encountering a known issue where the VPN connection intermittently drops on macOS Sonoma (14.x).\\n\\nWe have a beta fix available that should resolve this for you. Please install the latest beta client (v3.9.0-beta) from our support portal. A stable fix is expected to be released in version 3.9.1.\\n\\nCould you please try installing the beta client? We believe this will resolve the disconnection issue so you can have a stable connection for your client call. Please let me know if you need any assistance finding the support portal or installing the client.\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:10.351755Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I want information about product PRD-999.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I want information about product PRD-999.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "The agent should inform the customer that PRD-999 is not found and list the available product IDs.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"The agent should inform the customer that PRD-999 is not found and list the available product IDs.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I'm sorry, but I couldn't find any information for product ID PRD-999. We currently have information for products PRD-001, PRD-002, PRD-003, and PRD-004.\n\nIs there another product ID you'd like to search for, or perhaps I can help with something else?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I couldn't find any information for product ID PRD-999. We currently have information for products PRD-001, PRD-002, PRD-003, and PRD-004.\\n\\nIs there another product ID you'd like to search for, or perhaps I can help with something else?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"adk-aecf5b80-bfb9-4a19-991b-c5367332d2aa\", \"args\": {\"product_id\": \"PRD-999\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.985970Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-aecf5b80-bfb9-4a19-991b-c5367332d2aa\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"Product 'PRD-999' not found. Available products: PRD-001, PRD-002, PRD-003, PRD-004\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-12T09:30:10.091552Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I couldn't find any information for product ID PRD-999. We currently have information for products PRD-001, PRD-002, PRD-003, and PRD-004.\\n\\nIs there another product ID you'd like to search for, or perhaps I can help with something else?\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:10.093713Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I just want to talk to a real person. My issue with CloudSync has been going on for two weeks and nothing is working.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I just want to talk to a real person. My issue with CloudSync has been going on for two weeks and nothing is working.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "The agent should acknowledge the customer's request, empathize with the long-running issue, and escalate to a human agent with at least medium priority, creating a ticket with a clear summary.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"The agent should acknowledge the customer's request, empathize with the long-running issue, and escalate to a human agent with at least medium priority, creating a ticket with a clear summary.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "A human support agent will contact you within 4 hours. Your escalation ticket ID is TKT-10002. Please keep this for your reference.\n\nIs there anything else I can assist you with today while you wait?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"A human support agent will contact you within 4 hours. Your escalation ticket ID is TKT-10002. Please keep this for your reference.\\n\\nIs there anything else I can assist you with today while you wait?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly and professional customer support agent for our software products.\\n\\nYour responsibilities:\\n1. Answer questions about our products using the lookup_product_info tool.\\n2. Help troubleshoot issues using the check_known_issues tool (when the customer provides an error code).\\n3. Escalate complex cases to human agents using the escalate_to_human tool.\\n\\nEscalation guidelines \u2014 escalate when:\\n- The issue cannot be resolved with available information.\\n- The customer reports data loss or a critical outage.\\n- The customer explicitly asks to speak with a human.\\n- The same issue persists after applying the documented resolution.\\n- Choose priority carefully: low (minor inconvenience), medium (moderate impact),\\n  high (significant business impact), critical (data loss or full outage).\\n\\nOut-of-scope topics:\\n- If a customer asks about anything unrelated to our products (e.g., general coding help,\\n  personal advice, other companies' products), politely decline and refocus on product support.\\n- Do NOT answer questions about pricing for other companies, general tech support unrelated\\n  to our products, or topics completely outside of software support.\\n\\nTone guidelines:\\n- Always be polite, empathetic, and professional.\\n- Acknowledge the customer's frustration when they report problems.\\n- Be concise but thorough \u2014 avoid unnecessary jargon.\\n- Use first-person plural (\\\"we\\\") to represent the company.\\n- End interactions by asking if there is anything else you can help with.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up detailed information about a product by its product ID.\\n\\nArgs:\\n    product_id: The product identifier (e.g., 'PRD-001').\\n\\nReturns:\\n    A string with the product details, or an error message if not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check whether a given error code matches a known issue in the support database.\\n\\nArgs:\\n    error_code: The error code reported by the customer (e.g., 'ERR-1001').\\n\\nReturns:\\n    A string with the known issue details and resolution steps, or a message\\n    indicating no match was found.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a customer case to a human support agent.\\n\\nUse this when the issue is too complex to resolve automatically, requires\\naccount-level access, involves potential data loss, or when the customer\\nexplicitly requests human assistance.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, steps\\n        already taken, and any relevant context.\\n    priority: Severity level \u2014 'low', 'medium', 'high', or 'critical'.\\n        Use 'critical' only for active outages or data loss scenarios.\\n\\nReturns:\\n    A confirmation string with the escalation ticket ID and expected\\n    response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"enum\": [\"low\", \"medium\", \"high\", \"critical\"], \"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I understand your frustration. I'm very sorry to hear that your CloudSync issue has been ongoing for two weeks. I'm escalating your case to a human agent right away so they can provide more in-depth assistance.\\n\\n\"}, {\"function_call\": {\"id\": \"adk-a0abc29f-da3a-45c2-91ca-fe7e448df7d9\", \"args\": {\"case_summary\": \"Customer reports a persistent issue with CloudSync for two weeks, stating \\\"nothing is working\\\" and explicitly requested to speak with a human agent.\", \"priority\": \"high\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:08.984231Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-a0abc29f-da3a-45c2-91ca-fe7e448df7d9\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Escalation ticket created: TKT-10002\\nPriority: HIGH\\nExpected response: within 4 hours\\nA human support agent will contact you within 4 hours. Please keep your ticket ID (TKT-10002) for reference.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-12T09:30:11.148010Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"A human support agent will contact you within 4 hours. Your escalation ticket ID is TKT-10002. Please keep this for your reference.\\n\\nIs there anything else I can assist you with today while you wait?\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-12T09:30:11.149939Z\"}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}
