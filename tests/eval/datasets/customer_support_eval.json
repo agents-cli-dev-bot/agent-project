@@ -1,0 +1,39 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "lookup_product_info",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product p-100?"}]
+      }
+    },
+    {
+      "eval_case_id": "known_issue_matching",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm getting an err-404 error code. What does it mean?"}]
+      }
+    },
+    {
+      "eval_case_id": "appropriate_escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My Laptop Pro 15 caught on fire! Please escalate this immediately!"}]
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What is the capital of France?"}]
+      }
+    },
+    {
+      "eval_case_id": "response_tone",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I need help with my smartphone, it's very slow."}]
+      }
+    }
+  ]
+}
