@@ -1,0 +1,1021 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Tell me about product P123"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Product P123 is the SuperWidget 3000, which is described as a widget that does everything."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "product_lookup",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent. Your job is to answer product questions, troubleshoot common issues, and escalate complex cases to a human.\nYou must use the provided tools to look up product info and check known issues.\nIf a question is completely unrelated to our products or troubleshooting (out-of-scope), politely refuse to answer it.\nIf an issue cannot be resolved or is complex, use the escalate_to_human tool to escalate it with priority: low, medium, high, or critical.\nAdditionally, you have a self-evaluation feedback loop: if you determine that your drafted response might be weak or incomplete, use the draft_eval_case tool to log an eval case for future improvement, before returning your final response to the user.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Looks up product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Checks for known issues related to a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps for the error code.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalates a complex case to a human agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Drafts a new evaluation case for a weak response.\n\nArgs:\n    query: The user's query.\n    response: The weak response.\n    weakness: The identified weakness in the response.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                    "name": "draft_eval_case",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "query": {
+                          "title": "Query",
+                          "type": "string"
+                        },
+                        "response": {
+                          "title": "Response",
+                          "type": "string"
+                        },
+                        "weakness": {
+                          "title": "Weakness",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "query",
+                        "response",
+                        "weakness"
+                      ],
+                      "title": "draft_eval_caseParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1820243",
+                        "args": {
+                          "product_id": "P123"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:45.422632Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1820243",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "result": "SuperWidget 3000: A widget that does everything."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-22T10:39:46.694127Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Product P123 is the SuperWidget 3000, which is described as a widget that does everything."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:46.695987Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "I'm getting error code E001, what should I do?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Based on our records, to resolve error code **E001**, please try restarting your device. \n\nIf the issue persists after restarting, let me know and I can assist you further or escalate the matter to a human agent!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "known_issue_matching",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent. Your job is to answer product questions, troubleshoot common issues, and escalate complex cases to a human.\nYou must use the provided tools to look up product info and check known issues.\nIf a question is completely unrelated to our products or troubleshooting (out-of-scope), politely refuse to answer it.\nIf an issue cannot be resolved or is complex, use the escalate_to_human tool to escalate it with priority: low, medium, high, or critical.\nAdditionally, you have a self-evaluation feedback loop: if you determine that your drafted response might be weak or incomplete, use the draft_eval_case tool to log an eval case for future improvement, before returning your final response to the user.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Looks up product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Checks for known issues related to a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps for the error code.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalates a complex case to a human agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Drafts a new evaluation case for a weak response.\n\nArgs:\n    query: The user's query.\n    response: The weak response.\n    weakness: The identified weakness in the response.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                    "name": "draft_eval_case",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "query": {
+                          "title": "Query",
+                          "type": "string"
+                        },
+                        "response": {
+                          "title": "Response",
+                          "type": "string"
+                        },
+                        "weakness": {
+                          "title": "Weakness",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "query",
+                        "response",
+                        "weakness"
+                      ],
+                      "title": "draft_eval_caseParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1332493",
+                        "args": {
+                          "error_code": "E001"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:45.315782Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1332493",
+                        "name": "check_known_issues",
+                        "response": {
+                          "result": "Restart the device."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-22T10:39:46.859221Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Based on our records, to resolve error code **E001**, please try restarting your device. \n\nIf the issue persists after restarting, let me know and I can assist you further or escalate the matter to a human agent!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:46.861029Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "My system exploded and caught on fire, this is a huge emergency!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I am so sorry to hear this. Please prioritize your safety first—if there is active fire or danger, please contact your local emergency services (like 911) immediately. \n\nI have escalated this issue to our support team with the highest priority (**critical**). A human agent will contact you shortly to assist you. Please keep yourself safe in the meantime."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "appropriate_escalation",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent. Your job is to answer product questions, troubleshoot common issues, and escalate complex cases to a human.\nYou must use the provided tools to look up product info and check known issues.\nIf a question is completely unrelated to our products or troubleshooting (out-of-scope), politely refuse to answer it.\nIf an issue cannot be resolved or is complex, use the escalate_to_human tool to escalate it with priority: low, medium, high, or critical.\nAdditionally, you have a self-evaluation feedback loop: if you determine that your drafted response might be weak or incomplete, use the draft_eval_case tool to log an eval case for future improvement, before returning your final response to the user.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Looks up product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Checks for known issues related to a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps for the error code.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalates a complex case to a human agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Drafts a new evaluation case for a weak response.\n\nArgs:\n    query: The user's query.\n    response: The weak response.\n    weakness: The identified weakness in the response.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                    "name": "draft_eval_case",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "query": {
+                          "title": "Query",
+                          "type": "string"
+                        },
+                        "response": {
+                          "title": "Response",
+                          "type": "string"
+                        },
+                        "weakness": {
+                          "title": "Weakness",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "query",
+                        "response",
+                        "weakness"
+                      ],
+                      "title": "draft_eval_caseParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_728236",
+                        "args": {
+                          "case_summary": "User reports system exploded and caught on fire.",
+                          "priority": "critical"
+                        },
+                        "name": "escalate_to_human"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:45.401432Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_728236",
+                        "name": "escalate_to_human",
+                        "response": {
+                          "result": "Case escalated with priority critical: User reports system exploded and caught on fire.. A human agent will contact you shortly."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-22T10:39:47.485267Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I am so sorry to hear this. Please prioritize your safety first—if there is active fire or danger, please contact your local emergency services (like 911) immediately. \n\nI have escalated this issue to our support team with the highest priority (**critical**). A human agent will contact you shortly to assist you. Please keep yourself safe in the meantime."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:47.486894Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can you give me a recipe for chocolate chip cookies?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, but I can only assist with questions related to our products and troubleshooting. I am unable to provide recipes or other unrelated information."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "out_of_scope_refusal",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent. Your job is to answer product questions, troubleshoot common issues, and escalate complex cases to a human.\nYou must use the provided tools to look up product info and check known issues.\nIf a question is completely unrelated to our products or troubleshooting (out-of-scope), politely refuse to answer it.\nIf an issue cannot be resolved or is complex, use the escalate_to_human tool to escalate it with priority: low, medium, high, or critical.\nAdditionally, you have a self-evaluation feedback loop: if you determine that your drafted response might be weak or incomplete, use the draft_eval_case tool to log an eval case for future improvement, before returning your final response to the user.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Looks up product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Checks for known issues related to a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps for the error code.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalates a complex case to a human agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Drafts a new evaluation case for a weak response.\n\nArgs:\n    query: The user's query.\n    response: The weak response.\n    weakness: The identified weakness in the response.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                    "name": "draft_eval_case",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "query": {
+                          "title": "Query",
+                          "type": "string"
+                        },
+                        "response": {
+                          "title": "Response",
+                          "type": "string"
+                        },
+                        "weakness": {
+                          "title": "Weakness",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "query",
+                        "response",
+                        "weakness"
+                      ],
+                      "title": "draft_eval_caseParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with questions related to our products and troubleshooting. I am unable to provide recipes or other unrelated information."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:45.378804Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "I have error E002 but nothing works, I demand to speak to someone right now!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I have escalated your request to a human support agent with high priority. A representative will contact you shortly to assist you directly.\n\nIn the meantime, error code **E002** is typically associated with a power issue. If you'd like to check while you wait, please ensure that the power cable is securely plugged into both the device and the wall outlet. \n\nThank you for your patience, and someone will be with you very soon!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "response_tone",
+      "agent_data": {
+        "agents": {
+          "agent_project": {
+            "agent_id": "agent_project",
+            "agent_type": "LlmAgent",
+            "description": "",
+            "instruction": "You are a customer support agent. Your job is to answer product questions, troubleshoot common issues, and escalate complex cases to a human.\nYou must use the provided tools to look up product info and check known issues.\nIf a question is completely unrelated to our products or troubleshooting (out-of-scope), politely refuse to answer it.\nIf an issue cannot be resolved or is complex, use the escalate_to_human tool to escalate it with priority: low, medium, high, or critical.\nAdditionally, you have a self-evaluation feedback loop: if you determine that your drafted response might be weak or incomplete, use the draft_eval_case tool to log an eval case for future improvement, before returning your final response to the user.\n",
+            "tools": [
+              {
+                "function_declarations": [
+                  {
+                    "description": "Looks up product information by product ID.\n\nArgs:\n    product_id: The ID of the product.\n\nReturns:\n    Information about the product.",
+                    "name": "lookup_product_info",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "product_id": {
+                          "title": "Product Id",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "product_id"
+                      ],
+                      "title": "lookup_product_infoParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Checks for known issues related to a specific error code.\n\nArgs:\n    error_code: The error code to look up.\n\nReturns:\n    Troubleshooting steps for the error code.",
+                    "name": "check_known_issues",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "error_code": {
+                          "title": "Error Code",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "error_code"
+                      ],
+                      "title": "check_known_issuesParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Escalates a complex case to a human agent.\n\nArgs:\n    case_summary: A brief summary of the issue.\n    priority: The priority level (low, medium, high, critical).\n\nReturns:\n    Confirmation of the escalation.",
+                    "name": "escalate_to_human",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "case_summary": {
+                          "title": "Case Summary",
+                          "type": "string"
+                        },
+                        "priority": {
+                          "title": "Priority",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "case_summary",
+                        "priority"
+                      ],
+                      "title": "escalate_to_humanParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              },
+              {
+                "function_declarations": [
+                  {
+                    "description": "Drafts a new evaluation case for a weak response.\n\nArgs:\n    query: The user's query.\n    response: The weak response.\n    weakness: The identified weakness in the response.\n\nReturns:\n    Confirmation that the eval case was drafted.",
+                    "name": "draft_eval_case",
+                    "parameters_json_schema": {
+                      "properties": {
+                        "query": {
+                          "title": "Query",
+                          "type": "string"
+                        },
+                        "response": {
+                          "title": "Response",
+                          "type": "string"
+                        },
+                        "weakness": {
+                          "title": "Weakness",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "query",
+                        "response",
+                        "weakness"
+                      ],
+                      "title": "draft_eval_caseParams",
+                      "type": "object"
+                    },
+                    "response_json_schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            ],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_1345058",
+                        "args": {
+                          "error_code": "E002"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:45.442092Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_1345058",
+                        "name": "check_known_issues",
+                        "response": {
+                          "result": "Check power connection."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-22T10:39:47.134820Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_766893",
+                        "args": {
+                          "case_summary": "User has error E002, states that nothing works, and demands to speak to a human immediately.",
+                          "priority": "high"
+                        },
+                        "name": "escalate_to_human"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:47.136516Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_766893",
+                        "name": "escalate_to_human",
+                        "response": {
+                          "result": "Case escalated with priority high: User has error E002, states that nothing works, and demands to speak to a human immediately.. A human agent will contact you shortly."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-22T10:39:49.889765Z"
+              },
+              {
+                "author": "agent_project",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I have escalated your request to a human support agent with high priority. A representative will contact you shortly to assist you directly.\n\nIn the meantime, error code **E002** is typically associated with a power issue. If you'd like to check while you wait, please ensure that the power cable is securely plugged into both the device and the wall outlet. \n\nThank you for your patience, and someone will be with you very soon!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-22T10:39:49.891374Z"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

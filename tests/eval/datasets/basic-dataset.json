@@ -1,0 +1,39 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Tell me about product P123"}]
+      }
+    },
+    {
+      "eval_case_id": "known_issue_matching",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm getting error code E001, what should I do?"}]
+      }
+    },
+    {
+      "eval_case_id": "appropriate_escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My system exploded and caught on fire, this is a huge emergency!"}]
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you give me a recipe for chocolate chip cookies?"}]
+      }
+    },
+    {
+      "eval_case_id": "response_tone",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I have error E002 but nothing works, I demand to speak to someone right now!"}]
+      }
+    }
+  ]
+}
