@@ -7,5 +7,5 @@ repository_owner = "agents-cli-dev-bot"
 host_connection_name = "git-agent-project"
 create_cb_connection = false
 create_repository = false
-github_app_installation_id = "$GITHUB_APP_INSTALLATION_ID"
+github_app_installation_id = "1234567"
 github_pat_secret_id = "github-pat"

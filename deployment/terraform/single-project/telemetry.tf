@@ -14,6 +14,7 @@
 
 # BigQuery dataset for telemetry external tables
 resource "google_bigquery_dataset" "telemetry_dataset" {
+  delete_contents_on_destroy = true
   project       = var.project_id
   dataset_id    = replace("${var.project_name}_telemetry", "-", "_")
   friendly_name = "${var.project_name} Telemetry"
