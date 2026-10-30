@@ -1,0 +1,69 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product P123?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "Widget A is an active product described as: A great widget."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I am getting error E01, what should I do?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "You should restart the device."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "My device just caught fire and is burning the house down! Help!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I have escalated this case with critical priority."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me the recipe for chocolate cake?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I am a customer support agent. I can only answer product-related questions."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "response_tone",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "This product is garbage! You are terrible!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I apologize that you are having a frustrating experience. Let me see how I can help resolve this for you."}]
+        }
+      }
+    }
+  ]
+}

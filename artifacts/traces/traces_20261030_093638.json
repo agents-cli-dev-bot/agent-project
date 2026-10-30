@@ -1,0 +1,466 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can you tell me about product P123?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "Widget A is an active product described as: A great widget."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "product_lookup",
+      "agent_data": {
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_93744",
+                        "args": {
+                          "product_id": "P123"
+                        },
+                        "name": "lookup_product_info"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:38.566913Z"
+              },
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_93744",
+                        "name": "lookup_product_info",
+                        "response": {
+                          "name": "Widget A",
+                          "status": "active",
+                          "description": "A great widget."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-30T09:36:40.478064Z"
+              },
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:40.479528Z",
+                "state_delta": {
+                  "support_response": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!"
+                }
+              },
+              {
+                "author": "evaluator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:41.579450Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "I am getting error E01, what should I do?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "You should restart the device."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "known_issue",
+      "agent_data": {
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_44943",
+                        "args": {
+                          "error_code": "E01"
+                        },
+                        "name": "check_known_issues"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:38.635617Z"
+              },
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_44943",
+                        "name": "check_known_issues",
+                        "response": {
+                          "resolution": "Restart the device."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-30T09:36:39.997204Z"
+              },
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:39.998712Z",
+                "state_delta": {
+                  "support_response": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!"
+                }
+              },
+              {
+                "author": "evaluator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:40.923735Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "My device just caught fire and is burning the house down! Help!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I have escalated this case with critical priority."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "escalation",
+      "agent_data": {
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_2173464",
+                        "args": {
+                          "priority": "critical",
+                          "case_summary": "User reports their device caught fire and is burning their house down. Immediate safety concern."
+                        },
+                        "name": "escalate_to_human"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:38.641661Z"
+              },
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_2173464",
+                        "name": "escalate_to_human",
+                        "response": {
+                          "status": "Escalated with priority critical",
+                          "summary": "User reports their device caught fire and is burning their house down. Immediate safety concern."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                },
+                "event_time": "2026-10-30T09:36:40.841074Z"
+              },
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:40.842513Z",
+                "state_delta": {
+                  "support_response": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!"
+                }
+              },
+              {
+                "author": "evaluator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:42.162646Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "Can you tell me the recipe for chocolate cake?"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!"
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I am a customer support agent. I can only answer product-related questions."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "out_of_scope",
+      "agent_data": {
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:38.644392Z",
+                "state_delta": {
+                  "support_response": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!"
+                }
+              },
+              {
+                "author": "evaluator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:41.370836Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "This product is garbage! You are terrible!"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "reference": {
+        "response": {
+          "parts": [
+            {
+              "text": "I apologize that you are having a frustrating experience. Let me see how I can help resolve this for you."
+            }
+          ],
+          "role": "model"
+        }
+      },
+      "eval_case_id": "response_tone",
+      "agent_data": {
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "support_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:38.646265Z",
+                "state_delta": {
+                  "support_response": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you."
+                }
+              },
+              {
+                "author": "evaluator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "event_time": "2026-10-30T09:36:41.553603Z"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

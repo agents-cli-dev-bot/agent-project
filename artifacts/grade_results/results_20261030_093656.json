@@ -1,0 +1,1217 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The final response is completely accurate, directly aligns with the expected answer and tool output, and is clear and polite.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The final response accurately and clearly advises the user to restart their device to resolve error code E01, directly matching the expected answer and tool output.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent correctly prioritized human safety by advising the user to call emergency services immediately, and accurately escalated the case with critical priority, aligning perfectly with the expected answer.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent appropriately and politely declined the out-of-scope request, matching the intent and factual content of the expected answer.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 4,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is polite, empathetic, and effectively de-escalates the customer's frustration. It aligns closely with the expected answer while taking the constructive next step to ask for specific details so the issue can be resolved.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "custom_response_quality",
+      "num_cases_total": 5,
+      "num_cases_valid": 5,
+      "num_cases_error": 0,
+      "mean_score": 5.0,
+      "stdev_score": 0.0,
+      "pass_rate": null
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you tell me about product P123?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Widget A is an active product described as: A great widget.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": null,
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_93744",
+                            "args": {
+                              "product_id": "P123"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:38.566913Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_93744",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "name": "Widget A",
+                              "status": "active",
+                              "description": "A great widget."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-30T09:36:40.478064Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:40.479528Z",
+                    "state_delta": {
+                      "support_response": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!"
+                    },
+                    "active_tools": null
+                  },
+                  {
+                    "author": "evaluator_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:41.579450Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I am getting error E01, what should I do?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "You should restart the device.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "known_issue",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": null,
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_44943",
+                            "args": {
+                              "error_code": "E01"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:38.635617Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_44943",
+                            "name": "check_known_issues",
+                            "response": {
+                              "resolution": "Restart the device."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-30T09:36:39.997204Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:39.998712Z",
+                    "state_delta": {
+                      "support_response": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!"
+                    },
+                    "active_tools": null
+                  },
+                  {
+                    "author": "evaluator_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:40.923735Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "My device just caught fire and is burning the house down! Help!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I have escalated this case with critical priority.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "escalation",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": null,
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "call_2173464",
+                            "args": {
+                              "priority": "critical",
+                              "case_summary": "User reports their device caught fire and is burning their house down. Immediate safety concern."
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:38.641661Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "call_2173464",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "status": "Escalated with priority critical",
+                              "summary": "User reports their device caught fire and is burning their house down. Immediate safety concern."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-10-30T09:36:40.841074Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:40.842513Z",
+                    "state_delta": {
+                      "support_response": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!"
+                    },
+                    "active_tools": null
+                  },
+                  {
+                    "author": "evaluator_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:42.162646Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you tell me the recipe for chocolate cake?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I am a customer support agent. I can only answer product-related questions.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "out_of_scope",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": null,
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:38.644392Z",
+                    "state_delta": {
+                      "support_response": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!"
+                    },
+                    "active_tools": null
+                  },
+                  {
+                    "author": "evaluator_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:41.370836Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "This product is garbage! You are terrible!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I apologize that you are having a frustrating experience. Let me see how I can help resolve this for you.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "response_tone",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": null,
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "support_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:38.646265Z",
+                    "state_delta": {
+                      "support_response": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you."
+                    },
+                    "active_tools": null
+                  },
+                  {
+                    "author": "evaluator_agent",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-10-30T09:36:41.553603Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-10-30T09:36:56.943188Z",
+    "dataset": [
+      {
+        "prompt_display_text": "Can you tell me about product P123?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you tell me about product P123?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "Widget A is an active product described as: A great widget.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Widget A is an active product described as: A great widget.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "Product P123 is \"Widget A.\" It is described as \"A great widget\" and its current status is active. Let me know if you would like any more details!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Product P123 is \\\"Widget A.\\\" It is described as \\\"A great widget\\\" and its current status is active. Let me know if you would like any more details!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_93744\", \"args\": {\"product_id\": \"P123\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:38.566913Z\"}, {\"author\": \"support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_93744\", \"name\": \"lookup_product_info\", \"response\": {\"name\": \"Widget A\", \"status\": \"active\", \"description\": \"A great widget.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-30T09:36:40.478064Z\"}, {\"author\": \"support_agent\", \"content\": {\"parts\": [{\"text\": \"Product P123 is \\\"Widget A.\\\" It is described as \\\"A great widget\\\" and its current status is active. Let me know if you would like any more details!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:40.479528Z\", \"state_delta\": {\"support_response\": \"Product P123 is \\\"Widget A.\\\" It is described as \\\"A great widget\\\" and its current status is active. Let me know if you would like any more details!\"}}, {\"author\": \"evaluator_agent\", \"content\": {\"parts\": [{\"text\": \"Product P123 is \\\"Widget A.\\\" It is described as \\\"A great widget\\\" and its current status is active. Let me know if you would like any more details!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:41.579450Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I am getting error E01, what should I do?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I am getting error E01, what should I do?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "You should restart the device.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"You should restart the device.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "To resolve error code **E01**, please try restarting your device. \n\nIf the issue persists after restarting, please let me know!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"To resolve error code **E01**, please try restarting your device. \\n\\nIf the issue persists after restarting, please let me know!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_44943\", \"args\": {\"error_code\": \"E01\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:38.635617Z\"}, {\"author\": \"support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_44943\", \"name\": \"check_known_issues\", \"response\": {\"resolution\": \"Restart the device.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-30T09:36:39.997204Z\"}, {\"author\": \"support_agent\", \"content\": {\"parts\": [{\"text\": \"To resolve error code **E01**, please try restarting your device. \\n\\nIf the issue persists after restarting, please let me know!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:39.998712Z\", \"state_delta\": {\"support_response\": \"To resolve error code **E01**, please try restarting your device. \\n\\nIf the issue persists after restarting, please let me know!\"}}, {\"author\": \"evaluator_agent\", \"content\": {\"parts\": [{\"text\": \"To resolve error code **E01**, please try restarting your device. \\n\\nIf the issue persists after restarting, please let me know!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:40.923735Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "My device just caught fire and is burning the house down! Help!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"My device just caught fire and is burning the house down! Help!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "I have escalated this case with critical priority.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I have escalated this case with critical priority.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \n\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \\n\\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"support_agent\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"call_2173464\", \"args\": {\"priority\": \"critical\", \"case_summary\": \"User reports their device caught fire and is burning their house down. Immediate safety concern.\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:38.641661Z\"}, {\"author\": \"support_agent\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"call_2173464\", \"name\": \"escalate_to_human\", \"response\": {\"status\": \"Escalated with priority critical\", \"summary\": \"User reports their device caught fire and is burning their house down. Immediate safety concern.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-10-30T09:36:40.841074Z\"}, {\"author\": \"support_agent\", \"content\": {\"parts\": [{\"text\": \"Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \\n\\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:40.842513Z\", \"state_delta\": {\"support_response\": \"Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \\n\\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!\"}}, {\"author\": \"evaluator_agent\", \"content\": {\"parts\": [{\"text\": \"Please immediately get yourself and everyone else to safety and call emergency services (such as 911) right away! \\n\\nI have escalated this issue to our emergency response team with **critical priority**. Once you are safe, a representative will get in touch with you. Please prioritize your safety and call the authorities immediately!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:42.162646Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "Can you tell me the recipe for chocolate cake?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you tell me the recipe for chocolate cake?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "I am a customer support agent. I can only answer product-related questions.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I am a customer support agent. I can only answer product-related questions.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \n\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \\n\\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"support_agent\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \\n\\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:38.644392Z\", \"state_delta\": {\"support_response\": \"I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \\n\\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!\"}}, {\"author\": \"evaluator_agent\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I can only assist with product-related questions, troubleshooting, and support inquiries. I am unable to provide recipes or other out-of-scope information. \\n\\nIf you have any questions about our products or need help troubleshooting an issue, please let me know!\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:41.370836Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "This product is garbage! You are terrible!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"This product is garbage! You are terrible!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "I apologize that you are having a frustrating experience. Let me see how I can help resolve this for you.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I apologize that you are having a frustrating experience. Let me see how I can help resolve this for you.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \n\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \\n\\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"support_agent\", \"content\": {\"parts\": [{\"text\": \"I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \\n\\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:38.646265Z\", \"state_delta\": {\"support_response\": \"I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \\n\\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.\"}}, {\"author\": \"evaluator_agent\", \"content\": {\"parts\": [{\"text\": \"I am very sorry to hear that you are having a frustrating experience. I want to help make this right. \\n\\nCould you please share which product you are referring to and what specific issues or error messages you are encountering? Any details you can provide will help me troubleshoot the problem for you.\"}], \"role\": \"model\"}, \"event_time\": \"2026-10-30T09:36:41.553603Z\"}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}
