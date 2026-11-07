@@ -1,0 +1,71 @@
+metrics_to_run:
+  - custom_response_quality
+  - support_behavior_check
+
+thresholds:
+  custom_response_quality: 4   # 1-5 scale; require ≥4 for production
+  support_behavior_check: 4    # 1-5 scale; require ≥4 for production
+
+custom_metrics:
+  # General quality judge: accuracy, relevance, clarity
+  - name: custom_response_quality
+    custom_function_file: response_quality.py
+
+  # Domain-specific judge: tool use, scope enforcement, escalation, empathy
+  # Uses custom_function to avoid curly-brace conflicts in agent_data JSON.
+  - name: support_behavior_check
+    custom_function: |
+      import threading
+      from google import genai
+      from google.genai import types
+      from pydantic import BaseModel
+
+      _local = threading.local()
+
+      class _SupportVerdict(BaseModel):
+          score: int
+          explanation: str
+
+      def _client():
+          if not hasattr(_local, 'client'):
+              _local.client = genai.Client()
+          return _local.client
+
+      def evaluate(instance):
+          prompt_text = str(instance.get('prompt', ''))
+          response_text = str(instance.get('response', ''))
+          reference_text = str(instance.get('reference', ''))
+          judge_prompt = (
+              "You are evaluating a customer support agent for TechHome Products.\n"
+              "Score the response 1-5 (1=poor, 5=excellent) based on:\n"
+              "- Correct tool usage (used lookup_product_info / check_known_issues / escalate_to_human when appropriate)\n"
+              "- Scope enforcement (politely declined out-of-scope questions)\n"
+              "- Escalation judgment (escalated when needed, chose the right priority)\n"
+              "- Empathy and professional tone\n"
+              "- Factual accuracy (no fabricated product IDs, features, or error codes)\n\n"
+              f"User: {prompt_text}\n"
+              f"Agent response: {response_text}\n"
+              f"Expected answer: {reference_text}\n"
+          )
+          try:
+              resp = _client().models.generate_content(
+                  model="gemini-2.5-flash",
+                  contents=judge_prompt,
+                  config=types.GenerateContentConfig(
+                      temperature=0,
+                      response_mime_type="application/json",
+                      response_schema=_SupportVerdict,
+                  ),
+              )
+              v = resp.parsed
+              if v is None:
+                  return {"score": 3, "explanation": resp.text or "no response"}
+              return {"score": max(1, min(5, v.score)), "explanation": v.explanation}
+          except Exception as e:
+              return {"score": 3, "explanation": str(e)}
+
+  - name: agent_turn_count
+    custom_function: |
+      def evaluate(instance):
+          turns = (instance.get("agent_data") or {}).get("turns", [])
+          return {'score': len(turns)}

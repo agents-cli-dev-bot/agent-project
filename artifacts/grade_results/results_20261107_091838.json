@@ -1,0 +1,2665 @@
+{
+  "eval_case_results": [
+    {
+      "eval_case_index": 0,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent accurately identified the product and its key features, directly matching the information provided by the `lookup_product_info` tool and aligning perfectly with the expected answer. The response is clear, concise, and directly addresses the user's prompt.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent correctly identified the product (P001) and provided its key features accurately, matching the expected answer. The tone is professional, and the response directly addresses the user's query without needing tool call visibility in this context.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 1,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It accurately identifies the error code, provides the correct troubleshooting steps (power cycle, then factory reset) as outlined in the expected answer, and adds helpful context about the issue's severity and future patch. The response is clear, relevant, and follows the agent's persona guidelines by being friendly and action-oriented.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent correctly identified the error code as a known issue, provided clear and actionable troubleshooting steps (power cycle, factory reset), and maintained a professional and empathetic tone. Escalation was not needed as a solution was available. The response is factually accurate based on the context of a known issue and standard troubleshooting.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 2,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The final response is excellent. It accurately reflects the escalation of a critical security concern, stating that a human specialist will follow up within 1 hour, which aligns perfectly with the expected answer. Additionally, it provides helpful extra details like 'via your registered contact method' and 'Please keep your device nearby for troubleshooting,' which enhance the clarity and relevance without contradicting the core message of the expected answer. There is no factual disagreement.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent correctly identified the critical nature of the security breach and immediately escalated the issue with critical priority. They provided clear next steps, including the timeframe for human specialist contact and a helpful tip to keep the device nearby. This demonstrates excellent escalation judgment, appropriate tool usage (implicit escalation), and a professional, reassuring tone.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 3,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The user asked a question outside the agent's defined scope. The agent correctly identified this and provided the exact canned response specified in its instructions for out-of-scope queries. This perfectly matches the expected answer.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent correctly identified that the question was out of scope and politely declined to answer, while also reiterating their purpose to help with TechHome products. This demonstrates excellent scope enforcement and professional tone.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 4,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is excellent. It accurately identifies the error, provides the correct workaround steps directly from the tool output (including the 'log out and log back in' detail which the expected answer omits but is present in the tool's response), and offers escalation. The tone is empathetic and professional, aligning with the behavioral guidelines. It is highly relevant to the user's prompt and very clear in its instructions and next steps. The response is even slightly better than the expected answer due to its completeness and empathetic phrasing.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent demonstrates excellent empathy by acknowledging the user's frustration. They correctly identify the error code (E004) and provide relevant, actionable troubleshooting steps (clear cache, reinstall app) for a known issue. The agent also appropriately sets expectations for escalation if the initial steps don't resolve the problem, showing good judgment. The tone is professional throughout.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 5,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent's response is accurate, relevant, and clear. It correctly identifies that product X999 does not exist and provides the list of valid product IDs, which perfectly aligns with the expected answer. The added polite follow-up question enhances the user experience without deviating from the factual information.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent correctly identified that product X999 is not valid and provided the correct list of valid product IDs. The tone is professional and empathetic, and the agent proactively offered to look up information for valid products, which is excellent customer service. This aligns well with the expected behavior.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "eval_case_index": 6,
+      "response_candidate_results": [
+        {
+          "response_index": 0,
+          "metric_results": {
+            "custom_response_quality": {
+              "metric_name": "custom_response_quality",
+              "score": 5.0,
+              "explanation": "The agent accurately and promptly escalated the user's case to a human agent, as explicitly requested by the user. The response provides clear and relevant details about the escalation, including priority, expected response time, and next steps, which are derived directly from the tool output. While the expected answer mentions a potential error code (E003), the user did not provide an error code, and the agent's instructions for `check_known_issues` primarily focus on when an error code is reported or a symptom *maps* to a known issue. Given the user's direct request to speak to a human, the agent correctly prioritized escalation. The agent's response is complete, accurate, and highly relevant to the user's stated need.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            },
+            "support_behavior_check": {
+              "metric_name": "support_behavior_check",
+              "score": 5.0,
+              "explanation": "The agent correctly identified the user's request to speak to a human agent and escalated the case appropriately. The response is professional, sets clear expectations for the user, and provides helpful next steps. No tools were needed as the user explicitly requested escalation.",
+              "rubric_verdicts": null,
+              "raw_output": null,
+              "error_message": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": [
+    {
+      "metric_name": "custom_response_quality",
+      "num_cases_total": 7,
+      "num_cases_valid": 7,
+      "num_cases_error": 0,
+      "mean_score": 5.0,
+      "stdev_score": 0.0,
+      "pass_rate": 1.0
+    },
+    {
+      "metric_name": "support_behavior_check",
+      "num_cases_total": 7,
+      "num_cases_valid": 7,
+      "num_cases_error": 0,
+      "mean_score": 5.0,
+      "stdev_score": 0.0,
+      "pass_rate": 1.0
+    }
+  ],
+  "win_rates": null,
+  "evaluation_dataset": [
+    {
+      "bigquery_source": null,
+      "gcs_source": null,
+      "eval_cases": [
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Can you tell me about product P001? What are its key features?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "The SmartHome Hub Pro (P001) is a central hub for smart home automation. Its key features include voice control, app integration, Zigbee/Z-Wave support, and local processing.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "SmartHome Hub Pro with voice control, app integration, Zigbee/Z-Wave support, and local processing.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup_p001",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-5aa30715-a7a0-4a35-8f7a-55bbc4720637",
+                            "args": {
+                              "product_id": "P001"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.737470Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-5aa30715-a7a0-4a35-8f7a-55bbc4720637",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "Product: SmartHome Hub Pro (ID: P001)\nVersion: 3.2\nDescription: Central hub for smart home automation supporting multiple protocols\nKey features: Voice control, App integration, Zigbee/Z-Wave support, Local processing\nSupport page: https://support.techhome.example/P001"
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-11-07T09:16:49.754292Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "The SmartHome Hub Pro (P001) is a central hub for smart home automation. Its key features include voice control, app integration, Zigbee/Z-Wave support, and local processing.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:49.755872Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "My SmartHome Hub went offline after a firmware update. I'm seeing error code E001. What can I do?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Thanks for providing that error code. It looks like E001 is a known issue: \"Device Offline After Firmware Update,\" which matches what you're experiencing. This is a medium-severity issue, and a patch will be included in the next firmware release.\n\nIn the meantime, the recommended workaround is to **power cycle your device** (unplug it, wait 10 seconds, then plug it back in). If that doesn't resolve the issue, you can **perform a factory reset** by holding the reset button for 10 seconds.\n\nPlease try the power cycle first, and let me know if your SmartHome Hub comes back online!",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Error E001 is a known issue. Try power cycling: unplug the device, wait 10 seconds, then plug it back in. If that does not work, hold the reset button for 10 seconds to factory reset.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "known_issue_e001",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Hello there! I'm sorry to hear your SmartHome Hub went offline after the firmware update. That sounds frustrating, but I can definitely check into that error code for you.\n",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-f832a918-44df-4f40-9c4e-4269d36523d4",
+                            "args": {
+                              "error_code": "E001"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.666746Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-f832a918-44df-4f40-9c4e-4269d36523d4",
+                            "name": "check_known_issues",
+                            "response": {
+                              "result": "Error E001: Device Offline After Firmware Update\nSeverity: medium\nAffected products: P001\nStatus: Known issue \u2014 patch included in next firmware release\nWorkaround: Power cycle the device (unplug, wait 10 seconds, replug). If the issue persists, perform a factory reset by holding the reset button for 10 seconds."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-11-07T09:16:49.965118Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Thanks for providing that error code. It looks like E001 is a known issue: \"Device Offline After Firmware Update,\" which matches what you're experiencing. This is a medium-severity issue, and a patch will be included in the next firmware release.\n\nIn the meantime, the recommended workaround is to **power cycle your device** (unplug it, wait 10 seconds, then plug it back in). If that doesn't resolve the issue, you can **perform a factory reset** by holding the reset button for 10 seconds.\n\nPlease try the power cycle first, and let me know if your SmartHome Hub comes back online!",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:49.966700Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I think my SecureCam footage has been accessed by someone unauthorized. This is a security breach and I need immediate help!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Your case has been escalated successfully with a critical priority. A human support specialist will follow up with you within 1 hour via your registered contact method. Please keep your device nearby for troubleshooting.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "This is a critical security concern and I am escalating this immediately to a human specialist who will contact you within 1 hour.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "escalation_critical",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm very sorry to hear that your SecureCam footage may have been accessed by someone unauthorized. That sounds like a serious security concern, and I understand you need immediate help. I'm escalating this to a human agent right away.\n",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-5fd0d1e5-8080-47e4-96bc-92c72375c51f",
+                            "args": {
+                              "case_summary": "Customer reports unauthorized access to SecureCam footage, indicating a security breach. Requires immediate assistance.",
+                              "priority": "critical"
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.735399Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-5fd0d1e5-8080-47e4-96bc-92c72375c51f",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Case escalated successfully.\nPriority: critical\nCase summary: Customer reports unauthorized access to SecureCam footage, indicating a security breach. Requires immediate assistance.\nExpected response time: within 1 hour.\nA human support specialist will follow up via your registered contact method. Please keep your device nearby for troubleshooting."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-11-07T09:16:50.156318Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Your case has been escalated successfully with a critical priority. A human support specialist will follow up with you within 1 hour via your registered contact method. Please keep your device nearby for troubleshooting.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:50.157864Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What is the recipe for chocolate chip cookies?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I'm here specifically to help with TechHome product support and cannot assist with questions outside that scope.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "out_of_scope_refusal",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.746610Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I've been dealing with error E004 for three days now and I'm really frustrated. Nothing seems to work!",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I understand how frustrating it must be to deal with the \"App Login Loop / Authentication Failure\" (E004) for three days. This is a known issue that is currently under active investigation.\n\nThe recommended workaround is to clear your app cache (usually found in Settings > Apps > [App Name] > Clear Cache), then log out completely and log back in. If that doesn't resolve it, please try uninstalling and reinstalling the app.\n\nCould you please try these steps and let me know if the issue is resolved? If not, we can explore further options, including escalating this to a human agent.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I completely understand your frustration. Error E004 is a login/authentication issue that is under active investigation. Please try clearing the app cache and reinstalling. If that does not resolve it, I will escalate this to a human agent right away.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "response_tone_empathy",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry to hear you're having such a frustrating experience with error E004. Let me look into that for you right away.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-102da0a7-85e6-49cc-9991-d823fac816c8",
+                            "args": {
+                              "error_code": "E004"
+                            },
+                            "name": "check_known_issues",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.751060Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-102da0a7-85e6-49cc-9991-d823fac816c8",
+                            "name": "check_known_issues",
+                            "response": {
+                              "result": "Error E004: App Login Loop / Authentication Failure\nSeverity: high\nAffected products: P001, P002, P003\nStatus: Under active investigation\nWorkaround: Clear app cache (Settings > App > Clear Cache), log out completely, and log back in. If the issue persists, uninstall and reinstall the app."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-11-07T09:16:50.336932Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I understand how frustrating it must be to deal with the \"App Login Loop / Authentication Failure\" (E004) for three days. This is a known issue that is currently under active investigation.\n\nThe recommended workaround is to clear your app cache (usually found in Settings > Apps > [App Name] > Clear Cache), then log out completely and log back in. If that doesn't resolve it, please try uninstalling and reinstalling the app.\n\nCould you please try these steps and let me know if the issue is resolved? If not, we can explore further options, including escalating this to a human agent.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:50.338421Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "What can you tell me about product X999?",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "I'm sorry, but I can't find any information about a product with the ID X999. The valid product IDs are P001, P002, and P003. Would you like me to look up information for one of those products instead?",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "No product found with ID X999. The valid product IDs are P001, P002, and P003.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "product_lookup_invalid",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-fd4d116b-38ee-432a-919a-4d5645269636",
+                            "args": {
+                              "product_id": "X999"
+                            },
+                            "name": "lookup_product_info",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.753380Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-fd4d116b-38ee-432a-919a-4d5645269636",
+                            "name": "lookup_product_info",
+                            "response": {
+                              "result": "No product found with ID 'X999'. Valid product IDs are: P001, P002, P003."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-11-07T09:16:50.079585Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I'm sorry, but I can't find any information about a product with the ID X999. The valid product IDs are P001, P002, and P003. Would you like me to look up information for one of those products instead?",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:50.081113Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        },
+        {
+          "prompt": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "I want to speak to a human agent about an issue with my EnergyMeter that keeps showing wrong readings.",
+                "thought": null,
+                "thought_signature": null,
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "user"
+          },
+          "responses": [
+            {
+              "response": {
+                "parts": [
+                  {
+                    "media_resolution": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "file_data": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "inline_data": null,
+                    "text": "Your case has been successfully escalated to a human agent with a medium priority. You can expect a response within 1 business day. A specialist will contact you via your registered contact method. Please keep your EnergyMeter nearby for troubleshooting.",
+                    "thought": null,
+                    "thought_signature": null,
+                    "video_metadata": null,
+                    "tool_call": null,
+                    "tool_response": null,
+                    "part_metadata": null,
+                    "audio_transcription": null,
+                    "media_processing": null,
+                    "speech_metadata": null
+                  }
+                ],
+                "role": "model"
+              }
+            }
+          ],
+          "reference": {
+            "response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I will escalate your case to a human agent. The EnergyMeter incorrect readings may be error E003. A specialist will follow up with you.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            }
+          },
+          "system_instruction": null,
+          "conversation_history": null,
+          "rubric_groups": null,
+          "eval_case_id": "escalation_human_request",
+          "intermediate_events": null,
+          "agent_info": null,
+          "agent_data": {
+            "agents": {
+              "agent_project": {
+                "agent_id": "agent_project",
+                "agent_type": "LlmAgent",
+                "description": "",
+                "instruction": "You are a friendly, professional customer support agent for TechHome Products.\n\nYour role is to help customers with:\n- Product information and specifications (use lookup_product_info with the product ID)\n- Troubleshooting known errors (use check_known_issues with the error code)\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\n\nBehavioral guidelines:\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\n4. Use escalate_to_human when:\n   - The issue cannot be resolved with the available tools\n   - The customer explicitly requests a human agent\n   - The issue is high-severity (data loss, security concern, repeated failures)\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n6. Keep responses concise, empathetic, and action-oriented.\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\n",
+                "tools": [
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Look up product information by product ID.\n\nArgs:\n    product_id: The product identifier, e.g. \"P001\", \"P002\", or \"P003\".\n\nReturns:\n    Product details including name, version, description, features, and support URL.\n    Returns an error message if the product ID is not found.",
+                        "name": "lookup_product_info",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "product_id": {
+                              "title": "Product Id",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "product_id"
+                          ],
+                          "title": "lookup_product_infoParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Check for known issues by error code.\n\nArgs:\n    error_code: The error code to look up, e.g. \"E001\", \"E002\", \"E003\", or \"E004\".\n\nReturns:\n    Issue title, severity, affected products, current status, and workaround steps.\n    Returns a not-found message for unrecognized error codes.",
+                        "name": "check_known_issues",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "error_code": {
+                              "title": "Error Code",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "error_code"
+                          ],
+                          "title": "check_known_issuesParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  },
+                  {
+                    "retrieval": null,
+                    "computer_use": null,
+                    "file_search": null,
+                    "google_search": null,
+                    "google_maps": null,
+                    "code_execution": null,
+                    "enterprise_web_search": null,
+                    "function_declarations": [
+                      {
+                        "description": "Escalate a complex or unresolved support case to a human agent.\n\nArgs:\n    case_summary: A concise description of the customer's issue, what they have tried,\n        and why automated support was insufficient.\n    priority: Priority level for the escalation. Must be one of:\n        - \"low\": General questions or cosmetic issues (response in 2-3 business days)\n        - \"medium\": Non-urgent bugs affecting functionality (response in 1 business day)\n        - \"high\": Service impairment or repeated failures (response within 4 hours)\n        - \"critical\": Data loss, security issues, or complete service outage (response within 1 hour)\n\nReturns:\n    Escalation confirmation with ticket summary and estimated response time.",
+                        "name": "escalate_to_human",
+                        "parameters": null,
+                        "parameters_json_schema": {
+                          "properties": {
+                            "case_summary": {
+                              "title": "Case Summary",
+                              "type": "string"
+                            },
+                            "priority": {
+                              "title": "Priority",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "case_summary",
+                            "priority"
+                          ],
+                          "title": "escalate_to_humanParams",
+                          "type": "object"
+                        },
+                        "response": null,
+                        "response_json_schema": {
+                          "type": "string"
+                        },
+                        "behavior": null
+                      }
+                    ],
+                    "google_search_retrieval": null,
+                    "parallel_ai_search": null,
+                    "url_context": null,
+                    "mcp_servers": null,
+                    "exa_ai_search": null
+                  }
+                ],
+                "sub_agents": []
+              }
+            },
+            "turns": [
+              {
+                "turn_index": 0,
+                "turn_id": "turn_0",
+                "events": [
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "I understand that your EnergyMeter is showing incorrect readings and you'd like to speak with a human agent. I can help escalate this for you.\n\n",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        },
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": {
+                            "id": "adk-25651cd5-3317-4894-937d-0958186695e2",
+                            "args": {
+                              "case_summary": "Customer's EnergyMeter is consistently displaying incorrect readings, and they would like to speak to a human agent.",
+                              "priority": "medium"
+                            },
+                            "name": "escalate_to_human",
+                            "partial_args": null,
+                            "will_continue": null
+                          },
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:48.755235Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": {
+                            "will_continue": null,
+                            "scheduling": null,
+                            "parts": null,
+                            "id": "adk-25651cd5-3317-4894-937d-0958186695e2",
+                            "name": "escalate_to_human",
+                            "response": {
+                              "result": "Case escalated successfully.\nPriority: medium\nCase summary: Customer's EnergyMeter is consistently displaying incorrect readings, and they would like to speak to a human agent.\nExpected response time: 1 business day.\nA human support specialist will follow up via your registered contact method. Please keep your device nearby for troubleshooting."
+                            }
+                          },
+                          "inline_data": null,
+                          "text": null,
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "user"
+                    },
+                    "event_time": "2026-11-07T09:16:50.482820Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  },
+                  {
+                    "author": "agent_project",
+                    "content": {
+                      "parts": [
+                        {
+                          "media_resolution": null,
+                          "code_execution_result": null,
+                          "executable_code": null,
+                          "file_data": null,
+                          "function_call": null,
+                          "function_response": null,
+                          "inline_data": null,
+                          "text": "Your case has been successfully escalated to a human agent with a medium priority. You can expect a response within 1 business day. A specialist will contact you via your registered contact method. Please keep your EnergyMeter nearby for troubleshooting.",
+                          "thought": null,
+                          "thought_signature": null,
+                          "video_metadata": null,
+                          "tool_call": null,
+                          "tool_response": null,
+                          "part_metadata": null,
+                          "audio_transcription": null,
+                          "media_processing": null,
+                          "speech_metadata": null
+                        }
+                      ],
+                      "role": "model"
+                    },
+                    "event_time": "2026-11-07T09:16:50.484299Z",
+                    "state_delta": null,
+                    "active_tools": null
+                  }
+                ]
+              }
+            ]
+          },
+          "user_scenario": null,
+          "interactions_data_source": null
+        }
+      ],
+      "eval_dataset_df": null,
+      "candidate_name": null
+    }
+  ],
+  "metadata": {
+    "candidate_names": [
+      "candidate_1"
+    ],
+    "dataset_name": null,
+    "dataset_id": null,
+    "creation_timestamp": "2026-11-07T09:18:38.957790Z",
+    "dataset": [
+      {
+        "prompt_display_text": "Can you tell me about product P001? What are its key features?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Can you tell me about product P001? What are its key features?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "SmartHome Hub Pro with voice control, app integration, Zigbee/Z-Wave support, and local processing.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"SmartHome Hub Pro with voice control, app integration, Zigbee/Z-Wave support, and local processing.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "The SmartHome Hub Pro (P001) is a central hub for smart home automation. Its key features include voice control, app integration, Zigbee/Z-Wave support, and local processing.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"The SmartHome Hub Pro (P001) is a central hub for smart home automation. Its key features include voice control, app integration, Zigbee/Z-Wave support, and local processing.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"adk-5aa30715-a7a0-4a35-8f7a-55bbc4720637\", \"args\": {\"product_id\": \"P001\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.737470Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-5aa30715-a7a0-4a35-8f7a-55bbc4720637\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"Product: SmartHome Hub Pro (ID: P001)\\nVersion: 3.2\\nDescription: Central hub for smart home automation supporting multiple protocols\\nKey features: Voice control, App integration, Zigbee/Z-Wave support, Local processing\\nSupport page: https://support.techhome.example/P001\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-11-07T09:16:49.754292Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"The SmartHome Hub Pro (P001) is a central hub for smart home automation. Its key features include voice control, app integration, Zigbee/Z-Wave support, and local processing.\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:49.755872Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "My SmartHome Hub went offline after a firmware update. I'm seeing error code E001. What can I do?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"My SmartHome Hub went offline after a firmware update. I'm seeing error code E001. What can I do?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "Error E001 is a known issue. Try power cycling: unplug the device, wait 10 seconds, then plug it back in. If that does not work, hold the reset button for 10 seconds to factory reset.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Error E001 is a known issue. Try power cycling: unplug the device, wait 10 seconds, then plug it back in. If that does not work, hold the reset button for 10 seconds to factory reset.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "Thanks for providing that error code. It looks like E001 is a known issue: \"Device Offline After Firmware Update,\" which matches what you're experiencing. This is a medium-severity issue, and a patch will be included in the next firmware release.\n\nIn the meantime, the recommended workaround is to **power cycle your device** (unplug it, wait 10 seconds, then plug it back in). If that doesn't resolve the issue, you can **perform a factory reset** by holding the reset button for 10 seconds.\n\nPlease try the power cycle first, and let me know if your SmartHome Hub comes back online!",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Thanks for providing that error code. It looks like E001 is a known issue: \\\"Device Offline After Firmware Update,\\\" which matches what you're experiencing. This is a medium-severity issue, and a patch will be included in the next firmware release.\\n\\nIn the meantime, the recommended workaround is to **power cycle your device** (unplug it, wait 10 seconds, then plug it back in). If that doesn't resolve the issue, you can **perform a factory reset** by holding the reset button for 10 seconds.\\n\\nPlease try the power cycle first, and let me know if your SmartHome Hub comes back online!\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"Hello there! I'm sorry to hear your SmartHome Hub went offline after the firmware update. That sounds frustrating, but I can definitely check into that error code for you.\\n\"}, {\"function_call\": {\"id\": \"adk-f832a918-44df-4f40-9c4e-4269d36523d4\", \"args\": {\"error_code\": \"E001\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.666746Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-f832a918-44df-4f40-9c4e-4269d36523d4\", \"name\": \"check_known_issues\", \"response\": {\"result\": \"Error E001: Device Offline After Firmware Update\\nSeverity: medium\\nAffected products: P001\\nStatus: Known issue \u2014 patch included in next firmware release\\nWorkaround: Power cycle the device (unplug, wait 10 seconds, replug). If the issue persists, perform a factory reset by holding the reset button for 10 seconds.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-11-07T09:16:49.965118Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"Thanks for providing that error code. It looks like E001 is a known issue: \\\"Device Offline After Firmware Update,\\\" which matches what you're experiencing. This is a medium-severity issue, and a patch will be included in the next firmware release.\\n\\nIn the meantime, the recommended workaround is to **power cycle your device** (unplug it, wait 10 seconds, then plug it back in). If that doesn't resolve the issue, you can **perform a factory reset** by holding the reset button for 10 seconds.\\n\\nPlease try the power cycle first, and let me know if your SmartHome Hub comes back online!\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:49.966700Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I think my SecureCam footage has been accessed by someone unauthorized. This is a security breach and I need immediate help!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I think my SecureCam footage has been accessed by someone unauthorized. This is a security breach and I need immediate help!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "This is a critical security concern and I am escalating this immediately to a human specialist who will contact you within 1 hour.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"This is a critical security concern and I am escalating this immediately to a human specialist who will contact you within 1 hour.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "Your case has been escalated successfully with a critical priority. A human support specialist will follow up with you within 1 hour via your registered contact method. Please keep your device nearby for troubleshooting.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Your case has been escalated successfully with a critical priority. A human support specialist will follow up with you within 1 hour via your registered contact method. Please keep your device nearby for troubleshooting.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm very sorry to hear that your SecureCam footage may have been accessed by someone unauthorized. That sounds like a serious security concern, and I understand you need immediate help. I'm escalating this to a human agent right away.\\n\"}, {\"function_call\": {\"id\": \"adk-5fd0d1e5-8080-47e4-96bc-92c72375c51f\", \"args\": {\"case_summary\": \"Customer reports unauthorized access to SecureCam footage, indicating a security breach. Requires immediate assistance.\", \"priority\": \"critical\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.735399Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-5fd0d1e5-8080-47e4-96bc-92c72375c51f\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Case escalated successfully.\\nPriority: critical\\nCase summary: Customer reports unauthorized access to SecureCam footage, indicating a security breach. Requires immediate assistance.\\nExpected response time: within 1 hour.\\nA human support specialist will follow up via your registered contact method. Please keep your device nearby for troubleshooting.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-11-07T09:16:50.156318Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"Your case has been escalated successfully with a critical priority. A human support specialist will follow up with you within 1 hour via your registered contact method. Please keep your device nearby for troubleshooting.\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:50.157864Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "What is the recipe for chocolate chip cookies?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"What is the recipe for chocolate chip cookies?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "I'm here specifically to help with TechHome product support and cannot assist with questions outside that scope.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm here specifically to help with TechHome product support and cannot assist with questions outside that scope.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.746610Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I've been dealing with error E004 for three days now and I'm really frustrated. Nothing seems to work!",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I've been dealing with error E004 for three days now and I'm really frustrated. Nothing seems to work!\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "I completely understand your frustration. Error E004 is a login/authentication issue that is under active investigation. Please try clearing the app cache and reinstalling. If that does not resolve it, I will escalate this to a human agent right away.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I completely understand your frustration. Error E004 is a login/authentication issue that is under active investigation. Please try clearing the app cache and reinstalling. If that does not resolve it, I will escalate this to a human agent right away.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I understand how frustrating it must be to deal with the \"App Login Loop / Authentication Failure\" (E004) for three days. This is a known issue that is currently under active investigation.\n\nThe recommended workaround is to clear your app cache (usually found in Settings > Apps > [App Name] > Clear Cache), then log out completely and log back in. If that doesn't resolve it, please try uninstalling and reinstalling the app.\n\nCould you please try these steps and let me know if the issue is resolved? If not, we can explore further options, including escalating this to a human agent.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I understand how frustrating it must be to deal with the \\\"App Login Loop / Authentication Failure\\\" (E004) for three days. This is a known issue that is currently under active investigation.\\n\\nThe recommended workaround is to clear your app cache (usually found in Settings > Apps > [App Name] > Clear Cache), then log out completely and log back in. If that doesn't resolve it, please try uninstalling and reinstalling the app.\\n\\nCould you please try these steps and let me know if the issue is resolved? If not, we can explore further options, including escalating this to a human agent.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm sorry to hear you're having such a frustrating experience with error E004. Let me look into that for you right away.\"}, {\"function_call\": {\"id\": \"adk-102da0a7-85e6-49cc-9991-d823fac816c8\", \"args\": {\"error_code\": \"E004\"}, \"name\": \"check_known_issues\"}}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.751060Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-102da0a7-85e6-49cc-9991-d823fac816c8\", \"name\": \"check_known_issues\", \"response\": {\"result\": \"Error E004: App Login Loop / Authentication Failure\\nSeverity: high\\nAffected products: P001, P002, P003\\nStatus: Under active investigation\\nWorkaround: Clear app cache (Settings > App > Clear Cache), log out completely, and log back in. If the issue persists, uninstall and reinstall the app.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-11-07T09:16:50.336932Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I understand how frustrating it must be to deal with the \\\"App Login Loop / Authentication Failure\\\" (E004) for three days. This is a known issue that is currently under active investigation.\\n\\nThe recommended workaround is to clear your app cache (usually found in Settings > Apps > [App Name] > Clear Cache), then log out completely and log back in. If that doesn't resolve it, please try uninstalling and reinstalling the app.\\n\\nCould you please try these steps and let me know if the issue is resolved? If not, we can explore further options, including escalating this to a human agent.\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:50.338421Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "What can you tell me about product X999?",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"What can you tell me about product X999?\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "No product found with ID X999. The valid product IDs are P001, P002, and P003.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"No product found with ID X999. The valid product IDs are P001, P002, and P003.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "I'm sorry, but I can't find any information about a product with the ID X999. The valid product IDs are P001, P002, and P003. Would you like me to look up information for one of those products instead?",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I'm sorry, but I can't find any information about a product with the ID X999. The valid product IDs are P001, P002, and P003. Would you like me to look up information for one of those products instead?\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_call\": {\"id\": \"adk-fd4d116b-38ee-432a-919a-4d5645269636\", \"args\": {\"product_id\": \"X999\"}, \"name\": \"lookup_product_info\"}}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.753380Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-fd4d116b-38ee-432a-919a-4d5645269636\", \"name\": \"lookup_product_info\", \"response\": {\"result\": \"No product found with ID 'X999'. Valid product IDs are: P001, P002, P003.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-11-07T09:16:50.079585Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I'm sorry, but I can't find any information about a product with the ID X999. The valid product IDs are P001, P002, and P003. Would you like me to look up information for one of those products instead?\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:50.081113Z\"}]}]}"
+      },
+      {
+        "prompt_display_text": "I want to speak to a human agent about an issue with my EnergyMeter that keeps showing wrong readings.",
+        "prompt_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I want to speak to a human agent about an issue with my EnergyMeter that keeps showing wrong readings.\"\n    }\n  ],\n  \"role\": \"user\"\n}",
+        "reference": "I will escalate your case to a human agent. The EnergyMeter incorrect readings may be error E003. A specialist will follow up with you.",
+        "reference_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"I will escalate your case to a human agent. The EnergyMeter incorrect readings may be error E003. A specialist will follow up with you.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "response_display_text": "Your case has been successfully escalated to a human agent with a medium priority. You can expect a response within 1 business day. A specialist will contact you via your registered contact method. Please keep your EnergyMeter nearby for troubleshooting.",
+        "response_raw_json": "{\n  \"parts\": [\n    {\n      \"text\": \"Your case has been successfully escalated to a human agent with a medium priority. You can expect a response within 1 business day. A specialist will contact you via your registered contact method. Please keep your EnergyMeter nearby for troubleshooting.\"\n    }\n  ],\n  \"role\": \"model\"\n}",
+        "intermediate_events": null,
+        "agent_data": "{\"agents\": {\"agent_project\": {\"agent_id\": \"agent_project\", \"agent_type\": \"LlmAgent\", \"description\": \"\", \"instruction\": \"You are a friendly, professional customer support agent for TechHome Products.\\n\\nYour role is to help customers with:\\n- Product information and specifications (use lookup_product_info with the product ID)\\n- Troubleshooting known errors (use check_known_issues with the error code)\\n- Escalating complex or unresolved cases to human agents (use escalate_to_human)\\n\\nBehavioral guidelines:\\n1. Greet customers warmly and acknowledge their concern before diving into solutions.\\n2. Use lookup_product_info when a customer asks about product features, specs, compatibility, or support resources.\\n3. Use check_known_issues when a customer reports an error code (e.g., E001) or describes a symptom that maps to a known issue.\\n4. Use escalate_to_human when:\\n   - The issue cannot be resolved with the available tools\\n   - The customer explicitly requests a human agent\\n   - The issue is high-severity (data loss, security concern, repeated failures)\\n   Choose priority based on impact: low (cosmetic/informational), medium (non-critical bug), high (service impaired), critical (outage or security issue).\\n5. If a customer asks about anything unrelated to TechHome products and support (e.g., cooking recipes, weather, general knowledge questions), politely decline: \\\"I'm here specifically to help with TechHome product support. I'm not able to assist with questions outside that scope, but I'd be happy to help with any questions about your TechHome devices.\\\"\\n6. Keep responses concise, empathetic, and action-oriented.\\n7. After providing a workaround, ask if the issue is resolved. If not, offer escalation.\\n8. Never fabricate product IDs, error codes, or feature details \u2014 only report what the tools return.\\n\", \"tools\": [{\"function_declarations\": [{\"description\": \"Look up product information by product ID.\\n\\nArgs:\\n    product_id: The product identifier, e.g. \\\"P001\\\", \\\"P002\\\", or \\\"P003\\\".\\n\\nReturns:\\n    Product details including name, version, description, features, and support URL.\\n    Returns an error message if the product ID is not found.\", \"name\": \"lookup_product_info\", \"parameters_json_schema\": {\"properties\": {\"product_id\": {\"title\": \"Product Id\", \"type\": \"string\"}}, \"required\": [\"product_id\"], \"title\": \"lookup_product_infoParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Check for known issues by error code.\\n\\nArgs:\\n    error_code: The error code to look up, e.g. \\\"E001\\\", \\\"E002\\\", \\\"E003\\\", or \\\"E004\\\".\\n\\nReturns:\\n    Issue title, severity, affected products, current status, and workaround steps.\\n    Returns a not-found message for unrecognized error codes.\", \"name\": \"check_known_issues\", \"parameters_json_schema\": {\"properties\": {\"error_code\": {\"title\": \"Error Code\", \"type\": \"string\"}}, \"required\": [\"error_code\"], \"title\": \"check_known_issuesParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}, {\"function_declarations\": [{\"description\": \"Escalate a complex or unresolved support case to a human agent.\\n\\nArgs:\\n    case_summary: A concise description of the customer's issue, what they have tried,\\n        and why automated support was insufficient.\\n    priority: Priority level for the escalation. Must be one of:\\n        - \\\"low\\\": General questions or cosmetic issues (response in 2-3 business days)\\n        - \\\"medium\\\": Non-urgent bugs affecting functionality (response in 1 business day)\\n        - \\\"high\\\": Service impairment or repeated failures (response within 4 hours)\\n        - \\\"critical\\\": Data loss, security issues, or complete service outage (response within 1 hour)\\n\\nReturns:\\n    Escalation confirmation with ticket summary and estimated response time.\", \"name\": \"escalate_to_human\", \"parameters_json_schema\": {\"properties\": {\"case_summary\": {\"title\": \"Case Summary\", \"type\": \"string\"}, \"priority\": {\"title\": \"Priority\", \"type\": \"string\"}}, \"required\": [\"case_summary\", \"priority\"], \"title\": \"escalate_to_humanParams\", \"type\": \"object\"}, \"response_json_schema\": {\"type\": \"string\"}}]}], \"sub_agents\": []}}, \"turns\": [{\"turn_index\": 0, \"turn_id\": \"turn_0\", \"events\": [{\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"I understand that your EnergyMeter is showing incorrect readings and you'd like to speak with a human agent. I can help escalate this for you.\\n\\n\"}, {\"function_call\": {\"id\": \"adk-25651cd5-3317-4894-937d-0958186695e2\", \"args\": {\"case_summary\": \"Customer's EnergyMeter is consistently displaying incorrect readings, and they would like to speak to a human agent.\", \"priority\": \"medium\"}, \"name\": \"escalate_to_human\"}}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:48.755235Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"function_response\": {\"id\": \"adk-25651cd5-3317-4894-937d-0958186695e2\", \"name\": \"escalate_to_human\", \"response\": {\"result\": \"Case escalated successfully.\\nPriority: medium\\nCase summary: Customer's EnergyMeter is consistently displaying incorrect readings, and they would like to speak to a human agent.\\nExpected response time: 1 business day.\\nA human support specialist will follow up via your registered contact method. Please keep your device nearby for troubleshooting.\"}}}], \"role\": \"user\"}, \"event_time\": \"2026-11-07T09:16:50.482820Z\"}, {\"author\": \"agent_project\", \"content\": {\"parts\": [{\"text\": \"Your case has been successfully escalated to a human agent with a medium priority. You can expect a response within 1 business day. A specialist will contact you via your registered contact method. Please keep your EnergyMeter nearby for troubleshooting.\"}], \"role\": \"model\"}, \"event_time\": \"2026-11-07T09:16:50.484299Z\"}]}]}"
+      }
+    ]
+  },
+  "agent_info": null
+}
