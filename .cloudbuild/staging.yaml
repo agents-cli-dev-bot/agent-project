@@ -102,8 +102,9 @@ steps:
         echo "_________________________________________________________________________"
 
 substitutions:
-  _STAGING_PROJECT_ID: YOUR_STAGING_PROJECT_ID
+  _STAGING_PROJECT_ID: agents-cli-test-cicd-u75kiv
   _REGION: us-east1
+  _LOGS_BUCKET_NAME_STAGING: agents-cli-test-cicd-u75kiv-agent-project-logs
 
 logsBucket: gs://${PROJECT_ID}-agent-project-logs/build-logs
 options:
