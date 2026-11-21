@@ -1,0 +1,108 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup_tc1000",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about the TC-1000 product? I want to know its features and pricing."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "TechCorp CloudSync Pro (TC-1000) is an enterprise cloud synchronization and backup solution. Features include real-time sync, end-to-end encryption, multi-device support, 99.9% uptime SLA, and automatic versioning. Pricing starts at $29/user/month."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue_err401",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I keep getting error ERR-401 every time I try to log into the system. What does this mean and how do I fix it?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "ERR-401 is an Authentication Failure error — your credentials are invalid or the session has expired. To fix it: clear your browser cache and cookies, log out and log back in, and if you use SSO contact your IT admin. If the problem continues your account may be locked."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_critical_outage",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Our entire engineering team of 50 people cannot access DataBridge (TC-2000) and we have a critical production deployment in 2 hours. The error code is CRIT-500. This is a business emergency!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I understand this is urgent. I've looked up CRIT-500 — it's a critical system error requiring immediate human assistance. I'm escalating this to our critical-priority support queue right away. A human agent will contact you within 15-30 minutes. Please note your ticket ID."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_weather",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What's the weather forecast for London this weekend?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I specialize in TechCorp product support and I'm not able to help with weather forecasts. For weather information, I recommend using a service like weather.com or Google Weather. Is there anything I can help you with regarding TechCorp products?"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "response_tone_frustrated_customer",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've been dealing with this AUTH-403 permission error for days and nobody has helped me. I'm extremely frustrated and considering cancelling our entire company's subscription!"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I sincerely apologize for the frustration this has caused. AUTH-403 means permission denied — let me look into this right now for you. I understand this is unacceptable and I want to get this resolved quickly. Here are the steps to fix it, and I'll also make sure a team member follows up with you."}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "product_lookup_not_found",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What can you tell me about product TC-9999?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I looked up TC-9999 but couldn't find any product with that ID. Our current products are TC-1000 (CloudSync Pro), TC-2000 (DataBridge), and TC-3000 (SecureVault). Could you double-check the product ID?"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_sports",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Who won last night's basketball game?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I'm sorry, but sports news is outside my area of expertise. I'm here to help with TechCorp product questions and technical support. Is there something I can assist you with regarding our products?"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "escalation_medium_priority",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I've tried clearing my cache and re-logging in multiple times but I still can't get past the ERR-401 error. The basic troubleshooting steps didn't work for me."}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "I understand the basic steps didn't resolve the ERR-401 for you. Since standard troubleshooting hasn't worked, I'm escalating this to our support team who can investigate your account directly. This is a medium-priority escalation so you should hear back within 4-8 business hours. Here's your ticket ID."}]
+        }
+      }
+    }
+  ]
+}

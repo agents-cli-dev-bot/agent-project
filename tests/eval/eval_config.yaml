@@ -1,0 +1,21 @@
+metrics_to_run:
+  - custom_response_quality
+  - agent_turn_count
+
+# Fail `agents-cli eval run` (exit 1) when a metric's mean score drops below
+# its threshold. The custom_response_quality judge scores 1-5.
+thresholds:
+  custom_response_quality: 4
+
+custom_metrics:
+  # Domain-specific LLM-as-judge for customer support quality.
+  # Scores 1-5 on accuracy, appropriate tool use, tone, and scope handling.
+  - name: custom_response_quality
+    custom_function_file: response_quality.py
+
+  # Count agent turns — useful for detecting runaway loops.
+  - name: agent_turn_count
+    custom_function: |
+      def evaluate(instance):
+          turns = (instance.get("agent_data") or {}).get("turns", [])
+          return {'score': len(turns)}

@@ -1,0 +1,15 @@
+{
+  "remote_agent_runtime_id": null,
+  "deployment_timestamp": null,
+  "pending_operation": {
+    "owner_id": "0db3461e3c04451f9b028292ac4ad418",
+    "state": "running",
+    "operation_name": "projects/569187589892/locations/us-east1/reasoningEngines/8812056831531679744/operations/3658839277472579584",
+    "project": "agents-cli-test-cicd-u75kiv",
+    "location": "us-east1",
+    "deployment_target": "agent_runtime",
+    "started_at": "2026-11-21T09:32:20.960480+00:00",
+    "owner_pid": 716,
+    "owner_host": "c07a6905bfe4"
+  }
+}
