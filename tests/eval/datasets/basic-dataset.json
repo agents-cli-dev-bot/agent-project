@@ -1,0 +1,93 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "product_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Can you tell me about product P-1001? What are its specs and price?"}]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "lookup_product_info",
+          "tool_input": {"product_id": "P-1001"}
+        }
+      ],
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "SmartWidget Pro"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "known_issue_matching",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I keep getting ERR-500 when I try to log in. What is this error?"}]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "check_known_issues",
+          "tool_input": {"error_code": "ERR-500"}
+        }
+      ],
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "v2.1.2"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "appropriate_escalation",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "Our entire production system has been down for 3 hours and we are losing thousands of dollars per minute. I need immediate help!"}]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "escalate_to_human",
+          "tool_input": {"priority": "critical"}
+        }
+      ],
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "escalated"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "out_of_scope_refusal",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "What is the weather like in New York today? Also, can you recommend a good restaurant?"}]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "product support"}]
+        }
+      }
+    },
+    {
+      "eval_case_id": "response_tone",
+      "prompt": {
+        "role": "user",
+        "parts": [{"text": "I'm really frustrated. I've been trying to fix this ERR-AUTH error for two days and nothing works. I'm about to give up on your product entirely."}]
+      },
+      "expected_tool_use": [
+        {
+          "tool_name": "check_known_issues",
+          "tool_input": {"error_code": "ERR-AUTH"}
+        }
+      ],
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [{"text": "understand"}]
+        }
+      }
+    }
+  ]
+}
